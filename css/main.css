@@ -1,0 +1,28 @@
+/**clearfix**/
+*:focus{
+	outline: none;
+}
+.cfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .cfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+body{
+	background-color: #1959a2;
+  color: #fee;
+}
+.weatherBox1, .weatherBox2, .weatherBox3, .weatherBox4{
+    width: 200px;
+    padding: 30px 15px;
+    background-color: rgba(0,0,0,0.70);
+  margin: 0 3px;
+}
+.col-left{
+	float: left;
+}
