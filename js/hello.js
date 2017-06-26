@@ -3,7 +3,7 @@ $(document).ready(function() {
  var d = new Date();
  var hour= d.getHours();
  var $body = $("body");
- if( hour < 13){
+ if( hour < 18){
  $($body).css({
   "background" : "url(css/images/skyNew.jpg) center no-repeat"
  });
