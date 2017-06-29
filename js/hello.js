@@ -4,16 +4,14 @@ $(document).ready(function() {
  var d = new Date();
  var hour= d.getHours();
  var $body = $("body");
-	var dayNight = hour < 12 ? $($body).css({"background" : "url(css/images/skyNew.jpg) center no-repeat"});
-	:  $($body).css("background" : "url(css/images/space-the-stars.jpg) center no-repeat"});
- /**if( hour < 18){
+ if( hour < 18){
  $($body).css({
   "background" : "url(css/images/skyNew.jpg) center no-repeat"
  });
 }else{
   $($body).css({
   "background" : "url(css/images/space-the-stars.jpg) center no-repeat"
- });**/
+ });
 }
  weather();
   function weather(){
