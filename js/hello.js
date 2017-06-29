@@ -31,7 +31,7 @@ $(document).ready(function() {
              //try different border color for weatherBox container!!
              //dynamically create div's for weather forecast container 
              for(var i = 1; i <= 4; i++){
-    forecast +=  '<div class="weatherBox' + i + ' col-left">' + '<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].date + " Temp: " + data.query.results.channel.item.forecast[i].high + " C" + '</div>' + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
+    forecast +=  '<div class="weatherBox' + i + ' col-left">' + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' +'<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].date + " Temp: " + data.query.results.channel.item.forecast[i].high + " C" + '</div>' + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
     
              }
   forecast += '</div>';
