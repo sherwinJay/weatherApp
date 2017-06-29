@@ -4,7 +4,7 @@ $(document).ready(function() {
  var d = new Date();
  var hour= d.getHours();
  var $body = $("body");
-	hour < 10 ? $($body).css({"background" : "url(css/images/skyNew.jpg) center no-repeat"});
+	hour < 10 ? $($body).css({"background" : "url(css/images/skyNew.jpg) center no-repeat"})
 	:  $($body).css("background" : "url(css/images/space-the-stars.jpg) center no-repeat"});
  /**if( hour < 18){
  $($body).css({
