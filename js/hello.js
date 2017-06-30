@@ -37,7 +37,7 @@ $(document).ready(function() {
 	    + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
 		     //put weather icon here
 		+'<div class="icon' + i + '">' + 
-	    switch(coniditon){
+	    switch(condition){
 		    case condition.includes("Sunny"):
 		    	<img src="css/images/sunny.png" />;
 			break;
