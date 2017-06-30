@@ -47,7 +47,7 @@ $(document).ready(function() {
 		    case condition.includes("Thunderstorm"):
 		    	<img src="css/images/thunderstorm.png" />;
 			break;
-		} + '</div>'     
+		} + '</div>';     
 	    +'<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].date + " Temp: " + data.query.results.channel.item.forecast[i].high + " C" + '</div>' 
 	    + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
     
