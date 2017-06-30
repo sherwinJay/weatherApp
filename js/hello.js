@@ -37,7 +37,7 @@ $(document).ready(function() {
              for(var i = 1; i <= 4; i++){
 		     var condition = data.query.results.channel.item.forecast[i].text; 
 		     if(condition.includes("Thunderstorms")){
-		     console.log("true");
+		     conditionImg = '<img src="css/images/thunderstorm.png" />';
 		     }
 		    /** switch(condition){
 			case condition.includes("Sunny"):
