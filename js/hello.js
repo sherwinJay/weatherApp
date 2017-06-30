@@ -59,9 +59,7 @@ $(document).ready(function() {
 				conditionImg = '<img src="css/images/nightr-icon.png" />';
 			break;
 		       }**/
-    forecast += if(i == 1){
-    console.log("testing");
-    } '<div class="weatherBox' + i + ' col-left">' 
+    forecast += '<div class="weatherBox' + i + ' col-left">' 
 	    + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
 		     //put weather icon here
 		+ '<div class="icon' + i + '">' + conditionImg + '</div>'
