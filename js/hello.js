@@ -25,8 +25,8 @@ $(document).ready(function() {
            success: function(data){
              var forecast = '<div class="forecast cfix">';
              var weatherContainer = document.getElementById("weatherContainer");
-		
-		   var conditionImg;
+	     var condition;
+	     var conditionImg;
              $(".location").html(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
              $(".temp").html(data.query.results.channel.item.forecast[0].date + " Temp: " + data.query.results.channel.item.condition.temp + " C");
              $(".condition").html(data.query.results.channel.item.condition.text);
@@ -35,7 +35,7 @@ $(document).ready(function() {
              //dynamically create div's for weather forecast container 
 		
              for(var i = 1; i <= 4; i++){
-		     var condition = data.query.results.channel.item.forecast[i].text; 
+		     condition = data.query.results.channel.item.forecast[i].text; 
 		     if(condition.includes("Sunny")){
 		     conditionImg = '<img src="css/images/sunny.png" />';
 		     }else if(condition.includes("Clear")){
