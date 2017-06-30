@@ -36,7 +36,10 @@ $(document).ready(function() {
 		
              for(var i = 1; i <= 4; i++){
 		     var condition = data.query.results.channel.item.forecast[i].text; 
-		     switch(condition){
+		     if(condition.includes("Thunderstorms")){
+		     console.log("true");
+		     }
+		    /** switch(condition){
 			case condition.includes("Sunny"):
 				conditionImg = '<img src="css/images/sunny.png" />';
 			break;
@@ -49,7 +52,7 @@ $(document).ready(function() {
 			case condition.includes("Clear"):
 				conditionImg = '<img src="css/images/nightr-icon.png" />';
 			break;
-		       }
+		       }**/
     forecast +=  '<div class="weatherBox' + i + ' col-left">' 
 	    + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
 		     //put weather icon here
