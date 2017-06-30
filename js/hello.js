@@ -38,8 +38,15 @@ $(document).ready(function() {
 		     //put weather icon here
 		+'<div class="icon' + i + '">' + 
 	    switch(coniditon){
-		    case condition.includes(Sunny):
-		    	<img src=""css/images/ />
+		    case condition.includes("Sunny"):
+		    	<img src="css/images/sunny.png" />;
+			break;
+		    case condition.includes("Cloudy"):
+		    	<img src="css/images/cloudy.png" />;
+			break;
+		    case condition.includes("Thunderstorm"):
+		    	<img src="css/images/thunderstorm.png" />;
+			break;
 		} + '</div>'     
 	    +'<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].date + " Temp: " + data.query.results.channel.item.forecast[i].high + " C" + '</div>' 
 	    + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
