@@ -25,6 +25,7 @@ $(document).ready(function() {
            success: function(data){
              var forecast = '<div class="forecast cfix">';
              var weatherContainer = document.getElementById("weatherContainer");
+		var condition = data.query.results.channel.item.condition.text; 
              $(".location").html(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
              $(".temp").html(data.query.results.channel.item.forecast[0].date + " Temp: " + data.query.results.channel.item.condition.temp + " C");
              $(".condition").html(data.query.results.channel.item.condition.text);
@@ -35,6 +36,11 @@ $(document).ready(function() {
     forecast +=  '<div class="weatherBox' + i + ' col-left">' 
 	    + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
 		     //put weather icon here
+		+'<div class="icon' + i + '">' + 
+	    switch(coniditon){
+		    case condition.includes(Sunny):
+		    	<img src=""css/images/ />
+		} + '</div>'     
 	    +'<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].date + " Temp: " + data.query.results.channel.item.forecast[i].high + " C" + '</div>' 
 	    + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
     
