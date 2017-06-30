@@ -37,9 +37,8 @@ $(document).ready(function() {
 	    + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
 		     //put weather icon here
 		+'<div class="icon' + i + '">' +
-		     if(condition.includes("Thunderstorms")){
 		     <img src="css/images/thunderstorm.png" />;
-		     } + '</div>';     
+		      + '</div>';     
 	    +'<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].date + " Temp: " + data.query.results.channel.item.forecast[i].high + " C" + '</div>' 
 	    + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
     
