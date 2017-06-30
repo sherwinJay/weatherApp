@@ -25,7 +25,7 @@ $(document).ready(function() {
            success: function(data){
              var forecast = '<div class="forecast cfix">';
              var weatherContainer = document.getElementById("weatherContainer");
-		var condition = data.query.results.channel.item.condition.text; 
+		
 		   var conditionImg;
              $(".location").html(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
              $(".temp").html(data.query.results.channel.item.forecast[0].date + " Temp: " + data.query.results.channel.item.condition.temp + " C");
@@ -33,7 +33,10 @@ $(document).ready(function() {
        //forecast div
              //try different border color for weatherBox container!!
              //dynamically create div's for weather forecast container 
-		switch(condition){
+		
+             for(var i = 1; i <= 4; i++){
+		     var condition = data.query.results.channel.item.forecast[i].text; 
+		     switch(condition){
 			case condition.includes("Sunny"):
 				conditionImg = '<img src="css/images/sunny.png" />';
 			break;
@@ -47,7 +50,6 @@ $(document).ready(function() {
 				conditionImg = '<img src="css/images/nightr-icon.png" />';
 			break;
 		       }
-             for(var i = 1; i <= 4; i++){
     forecast +=  '<div class="weatherBox' + i + ' col-left">' 
 	    + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
 		     //put weather icon here
