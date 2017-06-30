@@ -26,18 +26,33 @@ $(document).ready(function() {
              var forecast = '<div class="forecast cfix">';
              var weatherContainer = document.getElementById("weatherContainer");
 		var condition = data.query.results.channel.item.condition.text; 
+		   var conditionImg;
              $(".location").html(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
              $(".temp").html(data.query.results.channel.item.forecast[0].date + " Temp: " + data.query.results.channel.item.condition.temp + " C");
              $(".condition").html(data.query.results.channel.item.condition.text);
        //forecast div
              //try different border color for weatherBox container!!
              //dynamically create div's for weather forecast container 
+		switch(condition){
+			case condition.includes("Sunny"):
+				conditionImg = '<img src="css/images/sunny.png" />';
+			break;
+			case condition.includes("Cloudy"):
+				conditionImg = '<img src="css/images/cloudy.png" />';
+			break;
+			case condition.includes("Thunderstorms"):
+				conditionImg = '<img src="css/images/thunderstorm.png" />';
+			break;
+			case condition.includes("Clear"):
+				conditionImg = '<img src="css/images/nightr-icon.png" />';
+			break;
+		       }
              for(var i = 1; i <= 4; i++){
     forecast +=  '<div class="weatherBox' + i + ' col-left">' 
 	    + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
 		     //put weather icon here
-		+'<div class="icon' + i + '">' + '<img src="css/images/thunderstorm.png" />' + '</div>'
-	    +'<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].date + " Temp: " + data.query.results.channel.item.forecast[i].high + " C" + '</div>' 
+		+ '<div class="icon' + i + '">' + conditionImg + '</div>'
+	    + '<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].date + " Temp: " + data.query.results.channel.item.forecast[i].high + " C" + '</div>' 
 	    + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
     
              }
