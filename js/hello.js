@@ -36,9 +36,7 @@ $(document).ready(function() {
     forecast +=  '<div class="weatherBox' + i + ' col-left">' 
 	    + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
 		     //put weather icon here
-		+'<div class="icon' + i + '">' +
-		     '<img src="css/images/thunderstorm.png" />';
-		      + '</div>';     
+		+'<div class="icon' + i + '">' + '<img src="css/images/thunderstorm.png" />' + '</div>'
 	    +'<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].date + " Temp: " + data.query.results.channel.item.forecast[i].high + " C" + '</div>' 
 	    + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
     
