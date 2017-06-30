@@ -36,7 +36,13 @@ $(document).ready(function() {
 		
              for(var i = 1; i <= 4; i++){
 		     var condition = data.query.results.channel.item.forecast[i].text; 
-		     if(condition.includes("Thunderstorms")){
+		     if(condition.includes("Sunny")){
+		     conditionImg = '<img src="css/images/sunny.png" />';
+		     }else if(condition.includes("Clear")){
+		     conditionImg = '<img src="css/images/nightr-icon.png" />';
+		     }else if(condition.includes("Cloudy")){
+		     conditionImg = '<img src="css/images/cloudy.png" />';
+		     }else if(condition.includes("Thunderstorms")){
 		     conditionImg = '<img src="css/images/thunderstorm.png" />';
 		     }
 		    /** switch(condition){
