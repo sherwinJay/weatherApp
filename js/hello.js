@@ -36,7 +36,7 @@ $(document).ready(function() {
 		
              for(var i = 1; i <= 4; i++){
 		     condition = data.query.results.channel.item.forecast[i].text; 
-		     /**if(condition.includes("Sunny")){
+		     if(condition.includes("Sunny")){
 		     conditionImg = '<img src="css/images/sunny.png" />';
 		     }else if(condition.includes("Clear")){
 		     conditionImg = '<img src="css/images/nightr-icon.png" />';
@@ -44,25 +44,11 @@ $(document).ready(function() {
 		     conditionImg = '<img src="css/images/cloudy.png" />';
 		     }else if(condition.includes("Thunderstorms")){
 		     conditionImg = '<img src="css/images/thunderstorm.png" />';
-		     }**/
-		    switch(condition){
-			case this.includes("Sunny"):
-				conditionImg = '<img src="css/images/sunny.png" />';
-			break;
-			case this.includes("Cloudy"):
-				conditionImg = '<img src="css/images/cloudy.png" />';
-			break;
-			case this.includes("Thunderstorms"):
-				conditionImg = '<img src="css/images/thunderstorm.png" />';
-			break;
-			case this.includes("Clear"):
-				conditionImg = '<img src="css/images/nightr-icon.png" />';
-			break;
-		       }
+		     }
+		     
     forecast += '<div class="weatherBox' + i + ' col-left">' 
 	    + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
-		     //put weather icon here
-		+ '<div class="icon' + i + '">' + conditionImg + '</div>'
+	    + '<div class="icon' + i + '">' + conditionImg + '</div>'
 	    + '<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].date + " Temp: " + data.query.results.channel.item.forecast[i].high + " C" + '</div>' 
 	    + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
     
