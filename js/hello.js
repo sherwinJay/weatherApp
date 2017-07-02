@@ -46,7 +46,7 @@ $(document).ready(function() {
 		     conditionImg = '<img src="css/images/thunderstorm.png" />';
 		     }
 		     
-    forecast += '<div class="weatherBox' + i + ' col-left">' 
+    forecast += '<div class="weatherBox col-left">' 
 	    + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
 	    + '<div class="icon' + i + '">' + conditionImg + '</div>'
 	    + '<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].date + " Temp: " + data.query.results.channel.item.forecast[i].high + " C" + '</div>' 
