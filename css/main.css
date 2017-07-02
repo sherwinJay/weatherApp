@@ -17,7 +17,7 @@ body{
 	background-color: #1959a2;
   color: #fee;
 }
-.weatherBox1, .weatherBox2, .weatherBox3, .weatherBox4{
+.weatherBox{
     width: 200px;
     padding: 30px 15px;
     background-color: rgba(0,0,0,0.70);
