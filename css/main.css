@@ -23,6 +23,11 @@ body{
     background-color: rgba(0,0,0,0.70);
   margin: 0 3px;
 }
+.weatherBox img{
+width: 70px;
+display: block;
+margin: 0 auto;
+}
 .col-left{
 	float: left;
 }
