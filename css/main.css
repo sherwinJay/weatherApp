@@ -17,6 +17,13 @@ body{
 	background-color: #1959a2;
   color: #fee;
 }
+#weatherContainer{
+	width: 1000px;
+	margin: 0 auto;
+}
+.current-weather{
+	padding: 15px 0;
+}
 .weatherBox{
     width: 200px;
     padding: 30px 15px;
@@ -26,7 +33,7 @@ body{
 }
 .weatherBox img{
 width: 70px;
-display: block;
+display: block;				
 margin: 0 auto;
 }
 .col-left{

@@ -25,44 +25,48 @@ $(document).ready(function() {
            success: function(data){
              var forecast = '<div class="forecast cfix">';
              var weatherContainer = document.getElementById("weatherContainer");
-	     var currentCondition = data.query.results.channel.item.condition.text;
-	     var condition;
-	     var conditionImg; 
-		     if(currentCondition.includes("Sunny")){
-		     conditionImg = '<img src="css/images/sunny.png" />';
-		     }else if(currentCondition.includes("Clear")){
-		     conditionImg = '<img src="css/images/nightr-icon.png" />';
-		     }else if(currentCondition.includes("Cloudy")){
-		     conditionImg = '<img src="css/images/cloudy.png" />';
-		     }else if(currentCondition.includes("Thunderstorms")){
-		     conditionImg = '<img src="css/images/thunderstorm.png" />';
-		     }
+       var currentCondition = data.query.results.channel.item.condition.text;
+       var condition;
+       var conditionImg; 
+         if(currentCondition.includes("Sunny")){
+         conditionImg = '<img src="css/images/sunny.png" />';
+         }else if(currentCondition.includes("Clear")){
+         conditionImg = '<img src="css/images/nightr-icon.png" />';
+         }else if(currentCondition.includes("Cloudy")){
+         conditionImg = '<img src="css/images/cloudy.png" />';
+         }else if(currentCondition.includes("Thunderstorms")){
+         conditionImg = '<img src="css/images/thunderstorm.png" />';
+         }else if(currentCondition.includes("Showers")){
+          conditionImg = '<img src="css/images/rain.png" />' 
+         }
              $(".location").html(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
-	     $(".imgContainer").html(conditionImg);
+       $(".imgContainer").html(conditionImg);
              $(".temp").html(data.query.results.channel.item.forecast[0].date + " Temp: " + data.query.results.channel.item.condition.temp + " C");
              $(".condition").html(data.query.results.channel.item.condition.text);
        //forecast div
              //try different border color for weatherBox container!!
              //dynamically create div's for weather forecast container 
-		
+    
              for(var i = 1; i <= 4; i++){
-		     condition = data.query.results.channel.item.forecast[i].text; 
-		     if(condition.includes("Sunny")){
-		     conditionImg = '<img src="css/images/sunny.png" />';
-		     }else if(condition.includes("Clear")){
-		     conditionImg = '<img src="css/images/nightr-icon.png" />';
-		     }else if(condition.includes("Cloudy")){
-		     conditionImg = '<img src="css/images/cloudy.png" />';
-		     }else if(condition.includes("Thunderstorms")){
-		     conditionImg = '<img src="css/images/thunderstorm.png" />';
-		     }
-		     
+         condition = data.query.results.channel.item.forecast[i].text; 
+         if(condition.includes("Sunny")){
+         conditionImg = '<img src="css/images/sunny.png" />';
+         }else if(condition.includes("Clear")){
+         conditionImg = '<img src="css/images/nightr-icon.png" />';
+         }else if(condition.includes("Cloudy")){
+         conditionImg = '<img src="css/images/cloudy.png" />';
+         }else if(condition.includes("Thunderstorms")){
+         conditionImg = '<img src="css/images/thunderstorm.png" />';
+         }else if(condition.includes("Showers")){
+          conditionImg = '<img src="css/images/rain.png" />' 
+         }
+         
     forecast += '<div class="weatherBox col-left">' 
-	    + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
-	    + '<div class="date' + i + '">' + data.query.results.channel.item.forecast[i].date + '</div>' 
-	    + '<div class="icon' + i + '">' + conditionImg + '</div>'
-	    + '<div class="temp' + i + '">' + " Temp: " + data.query.results.channel.item.forecast[i].high + " C" + ' | ' + data.query.results.channel.item.forecast[i].low + " C" + '</div>' 
-	    + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
+      + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
+      + '<div class="date' + i + '">' + data.query.results.channel.item.forecast[i].date + '</div>' 
+      + '<div class="icon' + i + '">' + conditionImg + '</div>'
+      + '<div class="temp' + i + '">' + " Temp: " + data.query.results.channel.item.forecast[i].high + " C" + ' | ' + data.query.results.channel.item.forecast[i].low + " C" + '</div>' 
+      + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
     
              }
   forecast += '</div>';
@@ -79,7 +83,7 @@ console.log(url);**/
 /**$.get(url, function(data){
     $(".location").html(data.location.name + " " +  data.location.region + ", " + data.location.country);
   $(".temp").html(data.current.temp_c + " C");
-    	});**/
+      });**/
   });
 
          
@@ -92,21 +96,21 @@ console.log(url);**/
        $('.greeting-id').append(data.id);
        $('.greeting-content').append(data.content);
     });**/
-	/**$.get('https://randomuser.me/api/1.1/',function(data){
-			$('.name').append(' ' + data.results[0].name.first + ' ' + data.results[0].name.last);
-			$('.address').append(' ' +data.results[0].user.location.city + ' ' + data.results[0].user.location.state);
-			$('.email').append(' ' +data.results[0].user.email);
-			$('.contact').append(' '+data.results[0].user.cell);
-		}
-	);**/
+  /**$.get('https://randomuser.me/api/1.1/',function(data){
+      $('.name').append(' ' + data.results[0].name.first + ' ' + data.results[0].name.last);
+      $('.address').append(' ' +data.results[0].user.location.city + ' ' + data.results[0].user.location.state);
+      $('.email').append(' ' +data.results[0].user.email);
+      $('.contact').append(' '+data.results[0].user.cell);
+    }
+  );**/
    /**    if(navigator.geolocation){
        navigator.geolocation.getCurrentPosition(function(position) {
-       	var url = "https://api.apixu.com/v1/current.json?key=ff4fb7b6a2f8452ab7a75833172106&q="+position.coords.latitude+','+position.coords.longitude;
-    	console.log(url);
+        var url = "https://api.apixu.com/v1/current.json?key=ff4fb7b6a2f8452ab7a75833172106&q="+position.coords.latitude+','+position.coords.longitude;
+      console.log(url);
     //$(".location").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
     $.get(url, function(data){
-    	$(".location").html(data.location.name);
-    	});
+      $(".location").html(data.location.name);
+      });
   });
 
    }**/
