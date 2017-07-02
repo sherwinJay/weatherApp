@@ -59,9 +59,9 @@ $(document).ready(function() {
 		     
     forecast += '<div class="weatherBox col-left">' 
 	    + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
-	    + '<div class="date' + i + '">' + data.query.results.channel.item.forecast[i].date + '</div>' 
+	   // + '<div class="date' + i + '">' + data.query.results.channel.item.forecast[i].date + '</div>' 
 	    + '<div class="icon' + i + '">' + conditionImg + '</div>'
-	    //+ '<div class="temp' + i + '">' + " Temp: " + data.query.results.channel.item.forecast[i].high + " C" + '/' + data.query.results.channel.item.forecast[i].low + " C" + '</div>' 
+	    + '<div class="temp' + i + '">' + " Temp: " + data.query.results.channel.item.forecast[i].high + " C" + '/' + data.query.results.channel.item.forecast[i].low + " C" + '</div>' 
 	    + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
     
              }
