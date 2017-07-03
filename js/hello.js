@@ -1,4 +1,4 @@
-//$(document).ready(function() {
+
 //check if sunny, cloudy, thunderstorm, rain, snow for weather icons
 //change temp to celsius to farenheit when click...vice versa!!!
  var d = new Date(),
@@ -80,4 +80,3 @@
    }
   }
 
-//});
