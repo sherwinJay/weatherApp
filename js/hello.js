@@ -8,7 +8,6 @@ $(document).ready(function() {
  $($body).css({"background" : "url(css/images/skyNew.jpg) center no-repeat"});
 }else{
   $($body).css({"background" : "url(css/images/space-the-stars.jpg) center no-repeat"});
-// hour < 18 ?  $($body).css({"background" : "url(css/images/skyNew.jpg) center no-repeat"}); : $($body).css({"background" : "url(css/images/space-the-stars.jpg) center no-repeat"});
 }
 });
  weather();
