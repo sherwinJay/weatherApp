@@ -13,7 +13,7 @@ $(document).ready(function() {
    "background" : "url(css/images/space-the-stars.jpg) center no-repeat"
   });
 }
-
+});
  weather();
   function weather(){
        if(navigator.geolocation){
@@ -79,4 +79,4 @@ $(document).ready(function() {
      
    }
   }
-});
+
