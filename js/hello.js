@@ -42,8 +42,9 @@ $(document).ready(function() {
          }
              $(".location").html(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
              $(".imgContainer").html(conditionImg);
-             $(".temp").html(data.query.results.channel.item.forecast[0].date  + data.query.results.channel.item.condition.temp + " C");
-             $(".condition").html(data.query.results.channel.item.condition.text);
+             $(".temp").html(data.query.results.channel.item.condition.temp + " C");
+             $(".current-date").html(data.query.results.channel.item.forecast[0].date);
+             $(".condition").html("Condition: " + data.query.results.channel.item.condition.text);
     
              for(var i = 1; i <= 4; i++){
          condition = data.query.results.channel.item.forecast[i].text; 
