@@ -39,3 +39,9 @@ margin: 0 auto;
 .col-left{
 	float: left;
 }
+.current-weather img{
+width: 100px;
+}
+.temp{
+font-size: 50px;
+}
