@@ -59,7 +59,7 @@ $(document).ready(function() {
       + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
               }
              }
-        currentWeather + '</div>';    
+        currentWeather += '</div>';    
   forecast += '</div>';
   currentContainer.innerHTML = currentContainer.innerHTML + currentWeather;
   weatherContainer.innerHTML = weatherContainer.innerHTML + forecast;
