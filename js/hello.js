@@ -25,7 +25,9 @@ $(document).ready(function() {
            dataType: "json",
            success: function(data){
              var forecast = '<div class="forecast cfix">',
+                 currentWeather = '<div class="current-weather">',
                  weatherContainer = document.getElementById("weatherContainer"),
+                 currentContainer = document.getElementById("currentContainer"),
                  currentCondition = data.query.results.channel.item.condition.text,
                  condition,
                  conditionImg; 
@@ -46,7 +48,14 @@ $(document).ready(function() {
              $(".current-date").html(data.query.results.channel.item.forecast[0].date);
              $(".condition").html("Condition: " + data.query.results.channel.item.condition.text);
     
-             for(var i = 1; i <= 4; i++){
+             for(var i = 0; i <= 4; i++){
+              if(i = 0){
+             currentWeather += '<div class="location">' + data.query.results.channel.location.city + ", " + data.query.results.channel.location.country + '</div>'
+               + '<div class="imgContainer">' + conditionImg + '</div>'
+               + '<p class="temp">' + data.query.results.channel.item.condition.temp + "&#176;" + " C" + '</p>'
+               + '<p class="current-date">' + data.query.results.channel.item.forecast[0].date + '</p>'
+               + '<p class="condition">Condition: ' + data.query.results.channel.item.condition.text + '</p>';
+              }
          condition = data.query.results.channel.item.forecast[i].text; 
          if(condition.includes("Sunny")){
          conditionImg = '<img src="css/images/sunny.png" />';
@@ -59,7 +68,6 @@ $(document).ready(function() {
          }else if(condition.includes("Showers")){
           conditionImg = '<img src="css/images/rain.png" />' 
          }
-         
     forecast += '<div class="weatherBox col-left">' 
       + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
       + '<div class="date' + i + '">' + data.query.results.channel.item.forecast[i].date + '</div>' 
@@ -68,7 +76,9 @@ $(document).ready(function() {
       + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
     
              }
+        currentWeather + '</div>';    
   forecast += '</div>';
+  currentContainer.innerHTML = currentContainer.innerHTML + currentWeather;
   weatherContainer.innerHTML = weatherContainer.innerHTML + forecast;
              
            },
