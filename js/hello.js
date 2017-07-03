@@ -4,15 +4,16 @@ $(document).ready(function() {
  var d = new Date(),
      hour= d.getHours(),
      $body = $("body");
- if( hour < 18){
+ /**if( hour < 18){
  $($body).css({
   "background" : "url(css/images/skyNew.jpg) center no-repeat"
  });
 }else{
   $($body).css({
   "background" : "url(css/images/space-the-stars.jpg) center no-repeat"
- });
-}
+ });**/
+ hour < 18 ?  $($body).css({"background" : "url(css/images/skyNew.jpg) center no-repeat"}); : $($body).css({"background" : "url(css/images/space-the-stars.jpg) center no-repeat"});
+//}
 });
  weather();
   function weather(){
