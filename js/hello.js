@@ -5,13 +5,9 @@ $(document).ready(function() {
      hour= d.getHours(),
      $body = $("body");
  if( hour < 18){
- $($body).css({
-  "background" : "url(css/images/skyNew.jpg) center no-repeat"
- });
+ $($body).css({"background" : "url(css/images/skyNew.jpg) center no-repeat"});
 }else{
-  $($body).css({
-  "background" : "url(css/images/space-the-stars.jpg) center no-repeat"
- });
+  $($body).css({"background" : "url(css/images/space-the-stars.jpg) center no-repeat"});
 // hour < 18 ?  $($body).css({"background" : "url(css/images/skyNew.jpg) center no-repeat"}); : $($body).css({"background" : "url(css/images/space-the-stars.jpg) center no-repeat"});
 }
 });
@@ -42,7 +38,7 @@ $(document).ready(function() {
           conditionImg = '<img src="css/images/rain.png" />' 
          }
              $(".location").html(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
-       $(".imgContainer").html(conditionImg);
+             $(".imgContainer").html(conditionImg);
              $(".temp").html(data.query.results.channel.item.forecast[0].date + " Temp: " + data.query.results.channel.item.condition.temp + " C");
              $(".condition").html(data.query.results.channel.item.condition.text);
     
@@ -64,7 +60,7 @@ $(document).ready(function() {
       + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
       + '<div class="date' + i + '">' + data.query.results.channel.item.forecast[i].date + '</div>' 
       + '<div class="icon' + i + '">' + conditionImg + '</div>'
-      + '<div class="temp' + i + '">' + " Temp: " + data.query.results.channel.item.forecast[i].high + " C" + ' | ' + data.query.results.channel.item.forecast[i].low + " C" + '</div>' 
+      + '<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].high + " C" + ' | ' + data.query.results.channel.item.forecast[i].low + " C" + '</div>' 
       + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
     
              }
