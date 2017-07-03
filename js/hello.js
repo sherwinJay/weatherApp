@@ -49,13 +49,6 @@ $(document).ready(function() {
              $(".condition").html("Condition: " + data.query.results.channel.item.condition.text);
     
              for(var i = 0; i <= 4; i++){
-              if(i == 0){
-             currentWeather += '<div class="location">' + data.query.results.channel.location.city + ", " + data.query.results.channel.location.country + '</div>'
-               + '<div class="imgContainer">' + conditionImg + '</div>'
-               + '<p class="temp">' + data.query.results.channel.item.condition.temp + "&#176;" + " C" + '</p>'
-               + '<p class="current-date">' + data.query.results.channel.item.forecast[0].date + '</p>'
-               + '<p class="condition">Condition: ' + data.query.results.channel.item.condition.text + '</p>';
-              }
          condition = data.query.results.channel.item.forecast[i].text; 
          if(condition.includes("Sunny")){
          conditionImg = '<img src="css/images/sunny.png" />';
@@ -68,13 +61,20 @@ $(document).ready(function() {
          }else if(condition.includes("Showers")){
           conditionImg = '<img src="css/images/rain.png" />' 
          }
+              if(i == 0){
+             currentWeather += '<div class="location">' + data.query.results.channel.location.city + ", " + data.query.results.channel.location.country + '</div>'
+               + '<div class="imgContainer">' + conditionImg + '</div>'
+               + '<p class="temp">' + data.query.results.channel.item.condition.temp + "&#176;" + " C" + '</p>'
+               + '<p class="current-date">' + data.query.results.channel.item.forecast[0].date + '</p>'
+               + '<p class="condition">Condition: ' + data.query.results.channel.item.condition.text + '</p>';
+              }else{
     forecast += '<div class="weatherBox col-left">' 
       + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
       + '<div class="date' + i + '">' + data.query.results.channel.item.forecast[i].date + '</div>' 
       + '<div class="icon">' + conditionImg + '</div>'
       + '<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].high + " C" + ' | ' + data.query.results.channel.item.forecast[i].low + " C" + '</div>' 
       + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
-    
+              }
              }
         currentWeather + '</div>';    
   forecast += '</div>';
