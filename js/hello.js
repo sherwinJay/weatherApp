@@ -42,7 +42,7 @@ $(document).ready(function() {
          }
              $(".location").html(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
              $(".imgContainer").html(conditionImg);
-             $(".temp").html(data.query.results.channel.item.condition.temp + " C");
+             $(".temp").html(data.query.results.channel.item.condition.temp + "&#176;" + " C");
              $(".current-date").html(data.query.results.channel.item.forecast[0].date);
              $(".condition").html("Condition: " + data.query.results.channel.item.condition.text);
     
