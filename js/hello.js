@@ -1,4 +1,4 @@
-
+$(document).ready(function() {
 //check if sunny, cloudy, thunderstorm, rain, snow for weather icons
 //change temp to celsius to farenheit when click...vice versa!!!
  var d = new Date(),
@@ -13,6 +13,7 @@
   "background" : "url(css/images/space-the-stars.jpg) center no-repeat"
  });
 }
+});
  weather();
   function weather(){
        if(navigator.geolocation){
