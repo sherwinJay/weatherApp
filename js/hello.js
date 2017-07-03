@@ -1,9 +1,9 @@
 $(document).ready(function() {
 //check if sunny, cloudy, thunderstorm, rain, snow for weather icons
 //change temp to celsius to farenheit when click...vice versa!!!
- var d = new Date();
- var hour= d.getHours();
- var $body = $("body");
+ var d = new Date(),
+     hour= d.getHours(),
+     $body = $("body");
  if( hour < 18){
  $($body).css({
   "background" : "url(css/images/skyNew.jpg) center no-repeat"
@@ -23,11 +23,11 @@ $(document).ready(function() {
            data: {},
            dataType: "json",
            success: function(data){
-             var forecast = '<div class="forecast cfix">';
-             var weatherContainer = document.getElementById("weatherContainer");
-       var currentCondition = data.query.results.channel.item.condition.text;
-       var condition;
-       var conditionImg; 
+             var forecast = '<div class="forecast cfix">',
+                 weatherContainer = document.getElementById("weatherContainer"),
+                 currentCondition = data.query.results.channel.item.condition.text,
+                 condition,
+                 conditionImg; 
          if(currentCondition.includes("Sunny")){
          conditionImg = '<img src="css/images/sunny.png" />';
          }else if(currentCondition.includes("Clear")){
