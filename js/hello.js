@@ -31,34 +31,17 @@ $(document).ready(function() {
                  currentCondition = data.query.results.channel.item.condition.text,
                  condition,
                  conditionImg; 
-         if(currentCondition.includes("Sunny")){
-         conditionImg = '<img src="css/images/sunny.png" />';
-         }else if(currentCondition.includes("Clear")){
-         conditionImg = '<img src="css/images/nightr-icon.png" />';
-         }else if(currentCondition.includes("Cloudy")){
-         conditionImg = '<img src="css/images/cloudy.png" />';
-         }else if(currentCondition.includes("Thunderstorms")){
-         conditionImg = '<img src="css/images/thunderstorm.png" />';
-         }else if(currentCondition.includes("Showers")){
-          conditionImg = '<img src="css/images/rain.png" />' 
-         }
-             $(".location").html(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
-             $(".imgContainer").html(conditionImg);
-             $(".temp").html(data.query.results.channel.item.condition.temp + "&#176;" + " C");
-             $(".current-date").html(data.query.results.channel.item.forecast[0].date);
-             $(".condition").html("Condition: " + data.query.results.channel.item.condition.text);
-    
              for(var i = 0; i <= 4; i++){
          condition = data.query.results.channel.item.forecast[i].text; 
-         if(condition.includes("Sunny")){
+         if(condition.includes("Sunny") || currentCondition.includes("Sunny")){
          conditionImg = '<img src="css/images/sunny.png" />';
-         }else if(condition.includes("Clear")){
+         }else if(condition.includes("Clear")|| currentCondition.includes("Clear")){
          conditionImg = '<img src="css/images/nightr-icon.png" />';
-         }else if(condition.includes("Cloudy")){
+         }else if(condition.includes("Cloudy") || currentCondition.includes("Cloudy")){
          conditionImg = '<img src="css/images/cloudy.png" />';
-         }else if(condition.includes("Thunderstorms")){
+         }else if(condition.includes("Thunderstorms")|| currentCondition.includes("Thunderstorms")){
          conditionImg = '<img src="css/images/thunderstorm.png" />';
-         }else if(condition.includes("Showers")){
+         }else if(condition.includes("Showers") || currentCondition.includes("Showers")){
           conditionImg = '<img src="css/images/rain.png" />' 
          }
               if(i == 0){
