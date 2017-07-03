@@ -49,7 +49,7 @@ $(document).ready(function() {
              $(".condition").html("Condition: " + data.query.results.channel.item.condition.text);
     
              for(var i = 0; i <= 4; i++){
-              if(i = 0){
+              if(i == 0){
              currentWeather += '<div class="location">' + data.query.results.channel.location.city + ", " + data.query.results.channel.location.country + '</div>'
                + '<div class="imgContainer">' + conditionImg + '</div>'
                + '<p class="temp">' + data.query.results.channel.item.condition.temp + "&#176;" + " C" + '</p>'
