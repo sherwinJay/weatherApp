@@ -13,7 +13,7 @@ $(document).ready(function() {
    "background" : "url(css/images/space-the-stars.jpg) center no-repeat"
   });
 }
-});
+
  weather();
  $(".tempScale").on("click", "a", function(e){
    //e.preventDefault();
@@ -89,3 +89,4 @@ $(document).ready(function() {
    }
   }
 
+});
