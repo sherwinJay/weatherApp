@@ -58,6 +58,11 @@
 forecast += '</div>';
   weatherContainer.innerHTML = weatherContainer.innerHTML + forecast;
              
+            $(".tempScale").on("click", "a" , function(e){
+           e.preventDefault();
+            alert("Hi");
+           });
+             
            },
             beforeSend: function(xhr) {
            xhr.setRequestHeader("X-Mashape-Key", "n2JY9NePqSmshITplIN7rdB7kMEkp1BeG00jsnd3uVIHwON3AK"); // Enter here your Mashape key
