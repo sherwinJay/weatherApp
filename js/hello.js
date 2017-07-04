@@ -33,7 +33,7 @@
                                                 + "   Humidity: " + data.query.results.channel.atmosphere.humidity
                                                 + "   Visibility: " + data.query.results.channel.atmosphere.visibility);
     
-            for(var i = 1; i <= 4; i++){
+          /**  for(var i = 1; i <= 4; i++){
          condition = data.query.results.channel.item.forecast[i].text; 
          if(condition.includes("Sunny")){
          conditionImg = '<img src="css/images/sunny.png" />';
@@ -52,11 +52,11 @@
       + '<div class="date' + i + '">' + data.query.results.channel.item.forecast[i].date + '</div>' 
       + '<div class="icon">' + conditionImg + '</div>'
       + '<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].high + "&#176; C" + ' | ' + data.query.results.channel.item.forecast[i].low + "&#176; C" + '</div>' 
-      + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
+      + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;**/
               
              }
-  forecast += '</div>';
-  weatherContainer.innerHTML = weatherContainer.innerHTML + forecast;
+/**  forecast += '</div>';
+  weatherContainer.innerHTML = weatherContainer.innerHTML + forecast;**/
              
            },
             beforeSend: function(xhr) {
