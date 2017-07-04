@@ -47,7 +47,7 @@ width: 100px;
 font-size: 50px;
 margin: 10px;
 }
-.icon{
+.icon, .celsius{
 margin: 10px 0;
 }
 .tempScale a{
