@@ -13,10 +13,7 @@ $(document).ready(function() {
    "background" : "url(css/images/space-the-stars.jpg) center no-repeat"
   });
 }
-  $("a").on("click" ,function(e){
-     e.preventDefault();
-     alert("Hi");
-   });
+ 
 });
  weather();
   function weather(){
@@ -34,7 +31,10 @@ $(document).ready(function() {
                  currentCondition = data.query.results.channel.item.condition.text,
                  condition,
                  conditionImg; 
-            
+              $("a").on("click" ,function(e){
+                e.preventDefault();
+                alert("Hi");
+              });
             if(currentCondition.includes("Sunny")){
          conditionImg = '<img src="css/images/sunny.png" />';
          }else if(currentCondition.includes("Clear")){
