@@ -52,9 +52,9 @@
       + '<div class="date' + i + '">' + data.query.results.channel.item.forecast[i].date + '</div>' 
       + '<div class="icon">' + conditionImg + '</div>'
       + '<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].high + "&#176; C" + ' | ' + data.query.results.channel.item.forecast[i].low + "&#176; C" + '</div>' 
-      + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;**/
+      + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
               
-             }
+             }**/
 /**  forecast += '</div>';
   weatherContainer.innerHTML = weatherContainer.innerHTML + forecast;**/
              
