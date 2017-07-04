@@ -13,13 +13,13 @@ $(document).ready(function() {
    "background" : "url(css/images/space-the-stars.jpg) center no-repeat"
   });
 }
+});
+ weather();
  $(".tempScale").on("click", "a", function(e){
    //e.preventDefault();
   alert("Hi");
    // convert temp scale here!
  });
-});
- weather();
   function weather(){
        if(navigator.geolocation){
        navigator.geolocation.getCurrentPosition(function(position) {
