@@ -16,6 +16,7 @@
 body{
 	background-color: #1959a2;
   color: #fee;
+	text-align: center;
 }
 #weatherContainer{
 	width: 1000px;
