@@ -7,6 +7,24 @@
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/hello.js"></script>
+        <script>
+        $(document).ready(function() {
+            //check if sunny, cloudy, thunderstorm, rain, snow for weather icons
+            //change temp to celsius to farenheit when click...vice versa!!!
+             var d = new Date(),
+                 hour= d.getHours(),
+                 $body = $("body");
+             if( hour < 18){
+             $($body).css({
+              "background" : "url(css/images/skyNew.jpg) center no-repeat"
+             });
+            }else{
+              $($body).css({
+               "background" : "url(css/images/space-the-stars.jpg) center no-repeat"
+              });
+            }
+        });
+        </script>
     </head>
     <body>  
 <div id="weatherContainer">
