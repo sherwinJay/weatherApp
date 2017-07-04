@@ -27,7 +27,6 @@ $(document).ready(function() {
              var forecast = '<div class="forecast cfix">',
                  currentWeather = '<div class="current-weather">',
                  weatherContainer = document.getElementById("weatherContainer"),
-                 currentContainer = document.getElementById("currentContainer"),
                  currentCondition = data.query.results.channel.item.condition.text,
                  condition,
                  conditionImg; 
@@ -50,15 +49,15 @@ $(document).ready(function() {
              $(".condition").html("Condition: " + data.query.results.channel.item.condition.text);
              for(var i = 1; i <= 4; i++){
          condition = data.query.results.channel.item.forecast[i].text; 
-         if(condition.includes("Sunny") || currentCondition.includes("Sunny")){
+         if(condition.includes("Sunny")){
          conditionImg = '<img src="css/images/sunny.png" />';
-         }else if(condition.includes("Clear")|| currentCondition.includes("Clear")){
+         }else if(condition.includes("Clear")){
          conditionImg = '<img src="css/images/nightr-icon.png" />';
-         }else if(condition.includes("Cloudy") || currentCondition.includes("Cloudy")){
+         }else if(condition.includes("Cloudy")){
          conditionImg = '<img src="css/images/cloudy.png" />';
-         }else if(condition.includes("Thunderstorms")|| currentCondition.includes("Thunderstorms")){
+         }else if(condition.includes("Thunderstorms")){
          conditionImg = '<img src="css/images/thunderstorm.png" />';
-         }else if(condition.includes("Showers") || currentCondition.includes("Showers")){
+         }else if(condition.includes("Showers")){
           conditionImg = '<img src="css/images/rain.png" />' 
          }
            
@@ -70,9 +69,7 @@ $(document).ready(function() {
       + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
               
              }
-        //currentWeather += '</div>';    
   forecast += '</div>';
-  //currentContainer.innerHTML = currentContainer.innerHTML + currentWeather;
   weatherContainer.innerHTML = weatherContainer.innerHTML + forecast;
              
            },
