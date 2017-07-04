@@ -15,7 +15,7 @@ $(document).ready(function() {
 }
  $(".tempScale").on("click", "a", function(e){
    e.preventDefault();
-  $(this).text(" Text");
+  alert("Hi");
    // convert temp scale here!
  });
 });
