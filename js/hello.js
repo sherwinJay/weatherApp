@@ -1,6 +1,10 @@
 $(document).ready(function() {
 //check if sunny, cloudy, thunderstorm, rain, snow for weather icons
 //change temp to celsius to farenheit when click...vice versa!!!
+   $("a").on("click" ,function(e){
+      e.preventDefault();
+      alert("Hi");
+    });
  var d = new Date(),
      hour= d.getHours(),
      $body = $("body");
@@ -13,7 +17,6 @@ $(document).ready(function() {
    "background" : "url(css/images/space-the-stars.jpg) center no-repeat"
   });
 }
- 
 });
  weather();
   function weather(){
@@ -31,10 +34,6 @@ $(document).ready(function() {
                  currentCondition = data.query.results.channel.item.condition.text,
                  condition,
                  conditionImg; 
-              $("a").on("click" ,function(e){
-                e.preventDefault();
-                alert("Hi");
-              });
             if(currentCondition.includes("Sunny")){
          conditionImg = '<img src="css/images/sunny.png" />';
          }else if(currentCondition.includes("Clear")){
