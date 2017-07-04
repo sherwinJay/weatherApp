@@ -50,3 +50,6 @@ margin: 10px;
 .icon{
 margin: 10px 0;
 }
+.celsius, .farenheit{
+text-decoration: none;
+}
