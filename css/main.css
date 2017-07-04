@@ -47,8 +47,11 @@ width: 100px;
 font-size: 50px;
 margin: 10px;
 }
-.icon, .celsius{
+.icon{
 margin: 10px 0;
+}
+.celsius{
+margin-top: 10px;
 }
 .tempScale a{
 text-decoration: none;
