@@ -32,7 +32,7 @@ $(document).ready(function() {
                  condition,
                  conditionImg; 
             
-            /**  if(currentCondition.includes("Sunny")){
+            if(currentCondition.includes("Sunny")){
          conditionImg = '<img src="css/images/sunny.png" />';
          }else if(currentCondition.includes("Clear")){
          conditionImg = '<img src="css/images/nightr-icon.png" />';
@@ -44,9 +44,10 @@ $(document).ready(function() {
           conditionImg = '<img src="css/images/rain.png" />' 
          }
              $(".location").html(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
-       $(".imgContainer").html(conditionImg);
-             $(".temp").html(data.query.results.channel.item.forecast[0].date + " Temp: " + data.query.results.channel.item.condition.temp + " C");
-             $(".condition").html(data.query.results.channel.item.condition.text);**/
+             $(".imgContainer").html(conditionImg);
+             $(".temp").html(data.query.results.channel.item.condition.temp + "&#176;" + " C");
+             $(".current-date").html(data.query.results.channel.item.forecast[0].date);
+             $(".condition").html("Condition: " + data.query.results.channel.item.condition.text);
              for(var i = 0; i <= 4; i++){
          condition = data.query.results.channel.item.forecast[i].text; 
          if(condition.includes("Sunny") || currentCondition.includes("Sunny")){
@@ -60,24 +61,18 @@ $(document).ready(function() {
          }else if(condition.includes("Showers") || currentCondition.includes("Showers")){
           conditionImg = '<img src="css/images/rain.png" />' 
          }
-              if(i == 0){
-             currentWeather += '<div class="location">' + data.query.results.channel.location.city + ", " + data.query.results.channel.location.country + '</div>'
-               + '<div class="cfix">' + '<div class="imgContainer col-left">' + conditionImg + '</div>'
-               + '<p class="temp col-left">' + data.query.results.channel.item.condition.temp + "&#176;" + " C" + '</p>' + '</div>'
-               + '<p class="current-date">' + data.query.results.channel.item.forecast[0].date + '</p>'
-               + '<p class="condition">Condition: ' + data.query.results.channel.item.condition.text + '</p>';
-              }else{
+           
     forecast += '<div class="weatherBox col-left">' 
       + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
       + '<div class="date' + i + '">' + data.query.results.channel.item.forecast[i].date + '</div>' 
       + '<div class="icon">' + conditionImg + '</div>'
       + '<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].high + " C" + ' | ' + data.query.results.channel.item.forecast[i].low + " C" + '</div>' 
       + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
-              }
+              
              }
-        currentWeather += '</div>';    
+        //currentWeather += '</div>';    
   forecast += '</div>';
-  currentContainer.innerHTML = currentContainer.innerHTML + currentWeather;
+  //currentContainer.innerHTML = currentContainer.innerHTML + currentWeather;
   weatherContainer.innerHTML = weatherContainer.innerHTML + forecast;
              
            },
