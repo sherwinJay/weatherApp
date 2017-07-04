@@ -32,11 +32,7 @@
              $(".condition").html("Condition: " + data.query.results.channel.item.condition.text 
                                                 + "   Humidity: " + data.query.results.channel.atmosphere.humidity
                                                 + "   Visibility: " + data.query.results.channel.atmosphere.visibility);
-     
-            $(".tempScale").on("click", "a", function(e){
-               e.preventDefault();
-                alert("Hi");
-           });
+    
             for(var i = 1; i <= 4; i++){
          condition = data.query.results.channel.item.forecast[i].text; 
          if(condition.includes("Sunny")){
