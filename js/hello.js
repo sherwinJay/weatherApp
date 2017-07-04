@@ -13,10 +13,6 @@ $(document).ready(function() {
    "background" : "url(css/images/space-the-stars.jpg) center no-repeat"
   });
 }
-  $("a").on("click", function(e){
-e.preventDefault();
-alert("Hi");
-});
 });
  weather();
   function weather(){
@@ -52,7 +48,12 @@ alert("Hi");
              $(".condition").html("Condition: " + data.query.results.channel.item.condition.text 
                                                 + "   Humidity: " + data.query.results.channel.atmosphere.humidity
                                                 + "   Visibility: " + data.query.results.channel.atmosphere.visibility);
-             for(var i = 1; i <= 4; i++){
+            $("a").on("click", function(e){
+              e.preventDefault();
+              alert("Hi");
+            }); 
+            
+            for(var i = 1; i <= 4; i++){
          condition = data.query.results.channel.item.forecast[i].text; 
          if(condition.includes("Sunny")){
          conditionImg = '<img src="css/images/sunny.png" />';
