@@ -15,6 +15,7 @@ $(document).ready(function() {
 }
 $(".tempScale").on("click", "a", function(e){
   e.preventDefault();
+ alert($(this));
   // convert temp scale here!
 });
  weather();
