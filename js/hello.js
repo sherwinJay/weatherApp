@@ -4,7 +4,7 @@ $(document).ready(function() {
  var d = new Date(),
      hour= d.getHours(),
      $body = $("body");
- if( hour < 12){
+ if( hour < 18){
  $($body).css({
   "background" : "url(css/images/skyNew.jpg) center no-repeat"
  });
