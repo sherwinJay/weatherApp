@@ -13,7 +13,7 @@ $(document).ready(function() {
    "background" : "url(css/images/space-the-stars.jpg) center no-repeat"
   });
 }
- $(".tempScale").on("click", "a", function(e){
+ $(".celsius").on("click", function(e){
    e.preventDefault();
   console.log("Working");
    // convert temp scale here!
