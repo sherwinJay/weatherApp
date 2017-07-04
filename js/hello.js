@@ -48,7 +48,7 @@ $(document).ready(function() {
              $(".temp").html(data.query.results.channel.item.condition.temp + "&#176;" + " C");
              $(".current-date").html(data.query.results.channel.item.forecast[0].date);
              $(".condition").html("Condition: " + data.query.results.channel.item.condition.text);
-             for(var i = 0; i <= 4; i++){
+             for(var i = 1; i <= 4; i++){
          condition = data.query.results.channel.item.forecast[i].text; 
          if(condition.includes("Sunny") || currentCondition.includes("Sunny")){
          conditionImg = '<img src="css/images/sunny.png" />';
