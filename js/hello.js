@@ -39,7 +39,7 @@ $(document).ready(function() {
          conditionImg = '<img src="css/images/cloudy.png" />';
          }else if(currentCondition.includes("Thunderstorms")){
          conditionImg = '<img src="css/images/thunderstorm.png" />';
-         }else if(currentCondition.includes("Showers")){
+         }else if(currentCondition.includes("Showers") || currentCondition.includes("Rain")){
           conditionImg = '<img src="css/images/rain.png" />' 
          }
              $(".location").html(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
@@ -59,7 +59,7 @@ $(document).ready(function() {
          conditionImg = '<img src="css/images/cloudy.png" />';
          }else if(condition.includes("Thunderstorms")){
          conditionImg = '<img src="css/images/thunderstorm.png" />';
-         }else if(condition.includes("Showers")){
+         }else if(condition.includes("Showers") || condition.includes("Rain")){
           conditionImg = '<img src="css/images/rain.png" />' 
          }
            
