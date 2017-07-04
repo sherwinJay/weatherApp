@@ -13,9 +13,9 @@ $(document).ready(function() {
    "background" : "url(css/images/space-the-stars.jpg) center no-repeat"
   });
 }
- $(".celsius").on("click", function(e){
+ $(".tempScale").on("click", "a", function(e){
    e.preventDefault();
-  console.log("Working");
+  $(this).text(" Text");
    // convert temp scale here!
  });
 });
