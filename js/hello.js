@@ -13,6 +13,9 @@ $(document).ready(function() {
    "background" : "url(css/images/space-the-stars.jpg) center no-repeat"
   });
 }
+$(".tempScale").on("click", "a", function(e){
+  e.preventDefault();
+  // convert temp scale here!
 });
  weather();
   function weather(){
