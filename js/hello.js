@@ -46,7 +46,9 @@ $(document).ready(function() {
              $(".imgContainer").html(conditionImg);
              $(".temp").html(data.query.results.channel.item.condition.temp + "&#176;" + " C");
              $(".current-date").html(data.query.results.channel.item.forecast[0].date);
-             $(".condition").html("Condition: " + data.query.results.channel.item.condition.text);
+             $(".condition").html("Condition: " + data.query.results.channel.item.condition.text 
+                                                + "   Humidity: " + data.query.results.channel.atmosphere.humidity
+                                                + "   Visibility: " + data.query.results.channel.atmosphere.visibility);
              for(var i = 1; i <= 4; i++){
          condition = data.query.results.channel.item.forecast[i].text; 
          if(condition.includes("Sunny")){
