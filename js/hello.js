@@ -12,6 +12,7 @@
                  currentWeather = '<div class="current-weather">',
                  weatherContainer = document.getElementById("weatherContainer"),
                  currentCondition = data.query.results.channel.item.condition.text,
+                 currentTemp = 
                  condition,
                  conditionImg; 
             if(currentCondition.includes("Sunny")){
@@ -60,7 +61,8 @@ forecast += '</div>';
              
             $(".tempScale").on("click", "a" , function(e){
            e.preventDefault();
-            alert("Hi");
+            $(this).closest.(".containerWrapper").find(".temp");
+             alert("Hi");
            });
              
            },
