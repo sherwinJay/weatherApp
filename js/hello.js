@@ -12,7 +12,7 @@
                  currentWeather = '<div class="current-weather">',
                  weatherContainer = document.getElementById("weatherContainer"),
                  currentCondition = data.query.results.channel.item.condition.text,
-                 currentTemp = 
+                 currentTemp = data.query.results.channel.item.condition.temp,
                  condition,
                  conditionImg; 
             if(currentCondition.includes("Sunny")){
@@ -28,7 +28,7 @@
          }
              $(".location").html(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
              $(".imgContainer").html(conditionImg);
-             $(".temp").html(data.query.results.channel.item.condition.temp + "&#176;");
+             $(".temp").html(currentTemp + "&#176;");
              $(".current-date").html(data.query.results.channel.item.forecast[0].date);
              $(".condition").html("Condition: " + data.query.results.channel.item.condition.text 
                                                 + "   Humidity: " + data.query.results.channel.atmosphere.humidity
