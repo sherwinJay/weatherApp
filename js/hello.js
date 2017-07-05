@@ -12,7 +12,6 @@
                  currentWeather = '<div class="current-weather">',
                  weatherContainer = document.getElementById("weatherContainer"),
                  currentCondition = data.query.results.channel.item.condition.text,
-                 currentTemp = data.query.results.channel.item.condition.temp,
                  condition,
                  conditionImg; 
             if(currentCondition.includes("Sunny")){
