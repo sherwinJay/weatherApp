@@ -14,7 +14,7 @@
                  currentCondition = data.query.results.channel.item.condition.text,
                  currentTemp =  data.query.results.channel.item.condition.temp,
                  degree = "&#176;",
-                 $this = "$(this)",
+                 $this = $(this),
                  condition,
                  conditionImg; 
             if(currentCondition.includes("Sunny")){
