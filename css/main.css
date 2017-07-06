@@ -77,6 +77,7 @@ margin: 0 auto;
 	.weatherBox{
 	width: 25%;
 	margin: 0;
+	padding: 20px 0;
 	}
 	#weatherContainer{
 	width: 700px;
