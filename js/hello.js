@@ -64,10 +64,10 @@ forecast += '</div>';
             $(".tempScale").on("click", "a" , function(e){
            e.preventDefault();
              //alert($(this).attr("class"));
-             if($this.attr("class") === "farenheit"){
-              $this.closest(".containerWrapper").find(".temp").html((currentTemp * (9/5) + 32) + degree);
+             if($($this).attr("class") === "farenheit"){
+              $($this).closest(".containerWrapper").find(".temp").html((currentTemp * (9/5) + 32) + degree);
              }else{
-             $this.closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
+             $($this).closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
              }
             /**
              alert("Hello");**/
