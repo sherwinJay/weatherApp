@@ -50,10 +50,10 @@
            
     forecast += '<div class="weatherBox col-left">' 
       + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
-      + '<div class="date' + i + '">' + data.query.results.channel.item.forecast[i].date + '</div>' 
+      + '<div class="date">' + data.query.results.channel.item.forecast[i].date + '</div>' 
       + '<div class="icon">' + conditionImg + '</div>'
       + '<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].high + "&#176; C" + ' | ' + data.query.results.channel.item.forecast[i].low + "&#176; C" + '</div>' 
-      + '<div class="condition' + i + '">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
+      + '<div class="condition">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
               
              }
 forecast += '</div>';
