@@ -67,7 +67,7 @@ margin: 0 auto;
 
 @media (max-width: 1020px){
 	.weatherBox{
-	width: 170px;
+	width: 160px;
 	}
 	#weatherContainer{
 	width: 800px;
