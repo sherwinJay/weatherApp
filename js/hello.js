@@ -30,7 +30,7 @@
              $(".imgContainer").html(conditionImg);
              $(".temp").html(currentTemp + "&#176;");
              $(".current-date").html(data.query.results.channel.item.forecast[0].date);
-             $(".condition").html("Condition: " + data.query.results.channel.item.condition.text 
+             $(".current-condition").html("Condition: " + data.query.results.channel.item.condition.text 
                                                 + "   Humidity: " + data.query.results.channel.atmosphere.humidity
                                                 + "   Visibility: " + data.query.results.channel.atmosphere.visibility);
     
