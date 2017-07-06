@@ -13,6 +13,8 @@
                  weatherContainer = document.getElementById("weatherContainer"),
                  currentCondition = data.query.results.channel.item.condition.text,
                  currentTemp =  data.query.results.channel.item.condition.temp,
+                 degree = "&#176;",
+                 $this = "$(this)",
                  condition,
                  conditionImg; 
             if(currentCondition.includes("Sunny")){
@@ -28,7 +30,7 @@
          }
              $(".location").html(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
              $(".imgContainer").html(conditionImg);
-             $(".temp").html(currentTemp + "&#176;");
+             $(".temp").html(currentTemp + degree);
              $(".current-date").html(data.query.results.channel.item.forecast[0].date);
              $(".current-condition").html("Condition: " + data.query.results.channel.item.condition.text 
                                                 + "   Humidity: " + data.query.results.channel.atmosphere.humidity
@@ -52,7 +54,7 @@
       + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
       + '<div class="date">' + data.query.results.channel.item.forecast[i].date + '</div>' 
       + '<div class="icon">' + conditionImg + '</div>'
-      + '<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].high + "&#176; C" + ' | ' + data.query.results.channel.item.forecast[i].low + "&#176; C" + '</div>' 
+      + '<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].high + degree + " C" + ' | ' + data.query.results.channel.item.forecast[i].low + "&#176; C" + '</div>' 
       + '<div class="condition">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
               
              }
@@ -61,11 +63,11 @@ forecast += '</div>';
              
             $(".tempScale").on("click", "a" , function(e){
            e.preventDefault();
-             alert($(this).attr("class"));
-             if($(this).attr("class") === "farenheit"){
-              $(this).closest(".containerWrapper").find(".temp").html((currentTemp * (9/5) + 32) + "&#176;");
+             //alert($(this).attr("class"));
+             if($($this).attr("class") === "farenheit"){
+              $($this).closest(".containerWrapper").find(".temp").html((currentTemp * (9/5) + 32) + degree);
              }else{
-             $(this).closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
+             $($this).closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
              }
             /**
              alert("Hello");**/
