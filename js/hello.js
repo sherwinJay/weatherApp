@@ -63,9 +63,9 @@ forecast += '</div>';
            e.preventDefault();
              alert($(this).attr("class"));
              if($(this).attr("class") === "farenheit"){
-              $(this).closest(".containerWrapper").find(".temp").html( currentTemp * (9/5) + 32 );
+              $(this).closest(".containerWrapper").find(".temp").html((currentTemp * (9/5) + 32) + "&#176;");
              }else{
-             $(this).closest(".containerWrapper").find(".temp").html( currentTemp );
+             $(this).closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
              }
             /**
              alert("Hello");**/
