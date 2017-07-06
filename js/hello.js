@@ -62,7 +62,7 @@ forecast += '</div>';
             $(".tempScale").on("click", "a" , function(e){
            e.preventDefault();
             //$(this).closest(".containerWrapper").find(".temp");
-             alert("Hi");
+             alert("Hello");
            });
              
            },
