@@ -61,7 +61,7 @@ forecast += '</div>';
              
             $(".tempScale").on("click", "a" , function(e){
            e.preventDefault();
-             alert($(this).data("attr"));
+             alert($(this).attr("class"));
             /**$(".farenheit").closest(".containerWrapper").find(".temp").html( currentTemp * (9/5) + 32 );
              alert("Hello");**/
            });
