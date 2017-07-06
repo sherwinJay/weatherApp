@@ -64,3 +64,12 @@ text-decoration: none;
 width: 250px;
 margin: 0 auto;
 }
+
+@media (max-width: 1020px){
+	.weatherBox{
+	width: 170px;
+	}
+	.weatherContainer{
+	width: 800px;
+	}
+}
