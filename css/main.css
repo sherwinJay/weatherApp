@@ -73,3 +73,15 @@ margin: 0 auto;
 	width: 800px;
 	}
 }
+@media (max-width: 830px){
+	.weatherBox{
+	width: 160px;
+	margin: 0;
+	}
+	#weatherContainer{
+	width: 700px;
+	}
+	.date, .condition{
+	display: none;
+	}
+}
