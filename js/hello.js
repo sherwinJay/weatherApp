@@ -61,7 +61,7 @@ forecast += '</div>';
              
             $(".tempScale").on("click", "a" , function(e){
            e.preventDefault();
-            $(this).filter("#celsius").closest(".containerWrapper").find(".temp").html( currentTemp * (9/5) + 3 );
+            $("#celsius").closest(".containerWrapper").find(".temp").html( currentTemp * (9/5) + 3 );
              alert("Hello");
            });
              
