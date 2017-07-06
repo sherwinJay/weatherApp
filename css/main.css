@@ -75,7 +75,7 @@ margin: 0 auto;
 }
 @media (max-width: 830px){
 	.weatherBox{
-	width: 160px;
+	width: 25%;
 	margin: 0;
 	}
 	#weatherContainer{
@@ -83,5 +83,8 @@ margin: 0 auto;
 	}
 	.date, .condition{
 	display: none;
+	}
+	.icon img{
+	width: 50px;
 	}
 }
