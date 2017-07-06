@@ -61,7 +61,7 @@ forecast += '</div>';
              
             $(".tempScale").on("click", "a" , function(e){
            e.preventDefault();
-            //$(this).closest(".containerWrapper").find(".temp");
+            $(this).closest(".containerWrapper").find(".temp");
              alert("Hello");
            });
              
