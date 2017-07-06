@@ -14,7 +14,6 @@
                  currentCondition = data.query.results.channel.item.condition.text,
                  currentTemp =  data.query.results.channel.item.condition.temp,
                  degree = "&#176;",
-                 $this = $(this),
                  condition,
                  conditionImg; 
             if(currentCondition.includes("Sunny")){
@@ -62,6 +61,7 @@ forecast += '</div>';
   weatherContainer.innerHTML = weatherContainer.innerHTML + forecast;
              
             $(".tempScale").on("click", "a" , function(e){
+             var $this = $(this);
            e.preventDefault();
              //alert($(this).attr("class"));
              if($($this).attr("class") === "farenheit"){
