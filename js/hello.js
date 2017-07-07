@@ -4,7 +4,7 @@ function computeHeight(){
   var windowHeight = function(){
    return $(window).innerHeight();
   }  
- console.log(windowHeight());
+ console.log(windowHeight() + "px");
  } 
 weather();
   function weather(){
