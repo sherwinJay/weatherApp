@@ -5,7 +5,7 @@ function computeHeight(){
   }
   if($(window).innerWidth() <= 830){
      $("#weatherContainer").css({
-     height: windowHeight() + "px";
+     height: windowHeight() + "px"
      });
      }
  } 
