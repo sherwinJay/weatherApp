@@ -94,5 +94,6 @@ margin: 0 auto;
 	.forecast{
 	position: absolute;
 	bottom: 0;
+	width: 100%;
 	}
 }
