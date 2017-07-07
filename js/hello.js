@@ -60,6 +60,9 @@
 forecast += '</div>';
   weatherContainer.innerHTML = weatherContainer.innerHTML + forecast;
             computeHeight(); 
+            $(window).on("resize", function(){
+            computeHeight();
+            });
             function computeHeight(){
               var windowHeight = function(){
                return $(window).innerHeight();
