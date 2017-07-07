@@ -80,8 +80,6 @@ margin: 0 auto;
 	width: 25%;
 	margin: 0;
 	padding: 20px 0;
-		position: absolute;
-		bottom: 0;
 	}
 	#weatherContainer{
 	width: 700px;
@@ -92,5 +90,9 @@ margin: 0 auto;
 	}
 	.icon img{
 	width: 50px;
+	}
+	.forecast{
+	position: absolute;
+	bottom: 0;
 	}
 }
