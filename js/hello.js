@@ -1,4 +1,15 @@
- weather();
+computeHeight(); 
+function computeHeight(){
+  var windowHeight = function(){
+   return $(window).innerHeight();
+  }
+  if($(window).innerWidth() <= 830){
+     $("#weatherContainer").css({
+     height: windowHeight() + "px";
+     });
+     }
+ } 
+weather();
   function weather(){
        if(navigator.geolocation){
        navigator.geolocation.getCurrentPosition(function(position) {
