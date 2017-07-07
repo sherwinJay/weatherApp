@@ -65,7 +65,9 @@ text-decoration: none;
 width: 250px;
 margin: 0 auto;
 }
-
+.active{
+color: #aaa;
+}
 @media (max-width: 1020px){
 	.weatherBox{
 	width: 160px;
