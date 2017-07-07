@@ -1,15 +1,4 @@
-computeHeight(); 
-
-function computeHeight(){
-  var windowHeight = function(){
-   return $(window).innerHeight();
-  }  
-  $("#weatherContainer").css({
-  height: 500 + "px",
-  });
- console.log($("#weatherContainer").innerHeight);
- } 
-weather();
+ weather();
   function weather(){
        if(navigator.geolocation){
        navigator.geolocation.getCurrentPosition(function(position) {
@@ -70,18 +59,24 @@ weather();
              }
 forecast += '</div>';
   weatherContainer.innerHTML = weatherContainer.innerHTML + forecast;
-             
+            computeHeight(); 
+            function computeHeight(){
+              var windowHeight = function(){
+               return $(window).innerHeight();
+              }  
+              $("#weatherContainer").css({
+              height: windowHeight() + "px"
+              });
+             console.log($("#weatherContainer").innerHeight);
+             }
             $(".tempScale").on("click", "a" , function(e){
              var $this = $(this);
            e.preventDefault();
-             //alert($(this).attr("class"));
              if($($this).attr("class") === "farenheit"){
               $($this).closest(".containerWrapper").find(".temp").html((currentTemp * (9/5) + 32) + degree);
              }else{
              $($this).closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
              }
-            /**
-             alert("Hello");**/
            });
              
            },
