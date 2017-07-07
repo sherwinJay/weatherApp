@@ -51,6 +51,9 @@ margin: 10px;
 .icon{
 margin: 10px 0;
 }
+.celsius{
+margin: 0;
+}
 .tempScale a{
 text-decoration: none;
 	display: block;
