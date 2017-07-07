@@ -4,7 +4,10 @@ function computeHeight(){
   var windowHeight = function(){
    return $(window).innerHeight();
   }  
- console.log(windowHeight() + "px");
+  $("#weatherContainer").css({
+  height: windowHeight() + "px"
+  });
+ console.log($("#weatherContainer").innerHeight);
  } 
 weather();
   function weather(){
