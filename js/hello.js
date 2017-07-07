@@ -1,4 +1,5 @@
 computeHeight(); 
+
 function computeHeight(){
   var windowHeight = function(){
    return $(window).innerHeight();
