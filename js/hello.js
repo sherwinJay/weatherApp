@@ -4,12 +4,11 @@ function computeHeight(){
   var windowHeight = function(){
    return $(window).innerHeight();
   }
-  if($(window).innerWidth() <= 830){
-     $("#weatherContainer").css({
-     height: windowHeight() + "px"
-     });
-     }
-  console.log(windowHeight());
+ $("#weatherContainer").css({
+ height: windowHeight() + "px"
+ });
+     
+ console.log(windowHeight());
  } 
 weather();
   function weather(){
