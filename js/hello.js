@@ -9,6 +9,7 @@ function computeHeight(){
      height: windowHeight() + "px"
      });
      }
+  console.log(windowHeight());
  } 
 weather();
   function weather(){
