@@ -67,7 +67,6 @@ forecast += '</div>';
               $("#weatherContainer").css({
               height: windowHeight() + "px"
               });
-             console.log($("#weatherContainer").innerHeight);
              }
             $(".tempScale").on("click", "a" , function(e){
              var $this = $(this);
