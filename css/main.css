@@ -69,6 +69,7 @@ margin: 0 auto;
 @media (max-width: 1020px){
 	.weatherBox{
 	width: 160px;
+	font-size: 14px;
 	}
 	#weatherContainer{
 	width: 800px;
@@ -82,11 +83,16 @@ margin: 0 auto;
 	}
 	#weatherContainer{
 	width: 700px;
+	position: relative;
 	}
 	.date, .condition{
 	display: none;
 	}
 	.icon img{
 	width: 50px;
+	}
+	.forecast{
+	position: absolute;
+	bottom: 0;
 	}
 }
