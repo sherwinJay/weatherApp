@@ -82,7 +82,7 @@ margin: 0 auto;
 	padding: 20px 0;
 	}
 	#weatherContainer{
-	width: 700px;
+	width: 100%;
 	position: relative;
 	}
 	.date, .condition{
