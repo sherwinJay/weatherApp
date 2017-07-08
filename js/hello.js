@@ -71,7 +71,7 @@ forecast += '</div>';
               height: windowHeight() + "px"
               });
              }
-            var num = (currentTemp * (9/5) + 32) + degree;   
+            var num = 26;   
             var $this = $(this);
             $(".tempScale").on("click", ".farenheit" , function(e){  
             e.preventDefault();
