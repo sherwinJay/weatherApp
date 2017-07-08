@@ -71,17 +71,18 @@ forecast += '</div>';
               height: windowHeight() + "px"
               });
              }
-            $(".tempScale").on("click", "a" , function(e){
-             var $this = $(this);
-           e.preventDefault();
-             if($($this).attr("class") === "farenheit"){
+            
+            var $this = $(this);
+            $(".tempScale").on("click", ".farenheit" , function(e){  
+            e.preventDefault();
               $(".highlighted").removeClass("highlighted");
-              $($this).closest(".containerWrapper").find(".temp").html((currentTemp * (9/5) + 32) + degree);
-             }else{
+              $($this).addClass("highlighted").closest(".containerWrapper").find(".temp").html((currentTemp * (9/5) + 32) + degree);
+             }).on("click", ".celsius", function(e){
+              e.preventDefault();
               $(".highlighted").removeClass("highlighted");
-             $($this).closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
-             }
+             $($this).addClass("highlighted").closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
            });
+           
              
            },
             beforeSend: function(xhr) {
