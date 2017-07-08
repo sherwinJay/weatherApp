@@ -87,7 +87,6 @@ color: #fff !important;
 	width: 100%;
 	/*position: relative;*/
 	display: flex;
-	flex-direction: column;
 	}
 	.date, .condition{
 	display: none;
@@ -95,15 +94,17 @@ color: #fff !important;
 	.icon img{
 	width: 50px;
 	}
+	.current-weather{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	}
 	.forecast{
 	/**position: absolute;
 	bottom: 0;**/
-	/*display: flex;*/
+	display: flex;
+	flex-direction: column;
 	justify-content: end;
 	width: 100%;
-	}
-	.current-weather{
-	display: flex;
-	justify-content: center;
 	}
 }
