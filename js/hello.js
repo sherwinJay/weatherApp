@@ -76,10 +76,10 @@ forecast += '</div>';
            e.preventDefault();
              if($($this).attr("class") === "farenheit"){
               $(".highlighted").removeClass("highlighted");
-              $($this).addClass("highlighted").closest(".containerWrapper").find(".temp").html((currentTemp * (9/5) + 32) + degree);
+              $($this).closest(".containerWrapper").find(".temp").html((currentTemp * (9/5) + 32) + degree);
              }else{
               $(".highlighted").removeClass("highlighted");
-             $($this).addClass("highlighted").closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
+             $($this).closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
              }
            });
              
