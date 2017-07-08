@@ -75,9 +75,11 @@ forecast += '</div>';
              var $this = $(this);
            e.preventDefault();
              if($($this).attr("class") === "farenheit"){
-              $($this).closest(".containerWrapper").find(".temp").html((currentTemp * (9/5) + 32) + degree);
+              $(".highlighted").removeClass("highlighted");
+              $($this).closest(".containerWrapper").find(".temp").addClass("highlighted").html((currentTemp * (9/5) + 32) + degree);
              }else{
-             $($this).closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
+              $(".highlighted").removeClass("highlighted");
+             $($this).closest(".containerWrapper").find(".temp").addClass("highlighted").html( currentTemp + "&#176;");
              }
            });
              
