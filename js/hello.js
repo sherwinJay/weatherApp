@@ -48,7 +48,7 @@
          }else if(condition.includes("Showers") || condition.includes("Rain")){
           conditionImg = '<img src="css/images/rain.png" />' 
          }
-           
+            
     forecast += '<div class="weatherBox col-left">' 
       + '<div  class="day' + i + '">' + data.query.results.channel.item.forecast[i].day + '</div>' 
       + '<div class="date">' + data.query.results.channel.item.forecast[i].date + '</div>' 
@@ -71,12 +71,12 @@ forecast += '</div>';
               height: windowHeight() + "px"
               });
              }
-            
+            var num = (currentTemp * (9/5) + 32) + degree;   
             var $this = $(this);
             $(".tempScale").on("click", ".farenheit" , function(e){  
             e.preventDefault();
               $(".highlighted").removeClass("highlighted");
-              $(this).addClass("highlighted").closest(".containerWrapper").find(".temp").html(parseFloat((currentTemp * (9/5) + 32) + degree).toFixed(2));
+              $(this).addClass("highlighted").closest(".containerWrapper").find(".temp").html(num.split(".")[1] ? parseFloat(num).toFixed(2) : num);
              }).on("click", ".celsius", function(e){
               e.preventDefault();
               $(".highlighted").removeClass("highlighted");
