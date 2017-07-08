@@ -84,16 +84,18 @@ color: #fff !important;
 	padding: 20px 0;
 	}
 	#weatherContainer{
-	width: 100%;
 	position: relative;
-	display: flex;
-	justify-content: center;
+	width: 100%;
 	}
 	.date, .condition{
 	display: none;
 	}
 	.icon img{
 	width: 50px;
+	}
+	.current-weather{
+	display: flex;
+	justify-content: center;
 	}
 	.forecast{
 	position: absolute;
