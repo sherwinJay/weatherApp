@@ -57,7 +57,7 @@ margin-top: 12px;
 .tempScale a{
 text-decoration: none;
 	display: block;
-	color: #fff;
+	color: #aaa;
 	text-align: left;
 	font-size: 24px;
 }
@@ -65,7 +65,7 @@ text-decoration: none;
 width: 250px;
 margin: 0 auto;
 }
-.active{
+.highlighted{
 color: #fff;
 }
 @media (max-width: 1020px){
