@@ -76,11 +76,11 @@ forecast += '</div>';
             $(".tempScale").on("click", ".farenheit" , function(e){  
             e.preventDefault();
               $(".highlighted").removeClass("highlighted");
-              $($this).addClass("highlighted").closest(".containerWrapper").find(".temp").html((currentTemp * (9/5) + 32) + degree);
+              $($this).closest(".containerWrapper").find(".temp").html((currentTemp * (9/5) + 32) + degree);
              }).on("click", ".celsius", function(e){
               e.preventDefault();
               $(".highlighted").removeClass("highlighted");
-             $($this).addClass("highlighted").closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
+             $($this).closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
            });
            
              
