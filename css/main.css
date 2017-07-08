@@ -98,9 +98,11 @@ color: #fff !important;
 	.forecast{
 	/**position: absolute;
 	bottom: 0;**/
+	/*display: flex;*/
 	justify-content: end;
 	width: 100%;
 	}
+	.current-weather{
 	display: flex;
 	justify-content: center;
 	}
