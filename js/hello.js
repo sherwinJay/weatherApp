@@ -77,10 +77,12 @@ forecast += '</div>';
             e.preventDefault();
               $(".highlighted").removeClass("highlighted");
               $(this).closest(".containerWrapper").find(".temp").html((currentTemp * (9/5) + 32) + degree);
+             $(this).addClass("highlighted");
              }).on("click", ".celsius", function(e){
               e.preventDefault();
               $(".highlighted").removeClass("highlighted");
              $(this).closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
+             $(this).addClass("highlighted");
            });
            
              
