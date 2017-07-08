@@ -85,7 +85,9 @@ color: #fff !important;
 	}
 	#weatherContainer{
 	width: 100%;
-	position: relative;
+	/*position: relative;*/
+	display: flex;
+	flex-direction: column;
 	}
 	.date, .condition{
 	display: none;
@@ -94,15 +96,12 @@ color: #fff !important;
 	width: 50px;
 	}
 	.forecast{
-	position: absolute;
-	bottom: 0;
+	/**position: absolute;
+	bottom: 0;**/
+	justify-content: end;
 	width: 100%;
 	}
-	.current-weather{
-	 width: 50%;
-	 height: 50%;
-	 margin: auto;
-	 position: absolute;
-	 top: 0; left: 0; bottom: 0; right: 0;
+	display: flex;
+	justify-content: center;
 	}
 }
