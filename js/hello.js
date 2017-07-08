@@ -76,7 +76,7 @@ forecast += '</div>';
             $(".tempScale").on("click", ".farenheit" , function(e){  
             e.preventDefault();
               $(".highlighted").removeClass("highlighted");
-              $(this).addClass("highlighted").closest(".containerWrapper").find(".temp").html((currentTemp * (9/5) + 32) + degree);
+              $(this).addClass("highlighted").closest(".containerWrapper").find(".temp").html(((currentTemp * (9/5) + 32) + degree).toFixed(2));
              }).on("click", ".celsius", function(e){
               e.preventDefault();
               $(".highlighted").removeClass("highlighted");
