@@ -70,9 +70,9 @@ forecast += '</div>';
               $("#weatherContainer").css({
               height: windowHeight() + "px"
               });
-             $(".current-weather").css({
+             /**$(".current-weather").css({
              height: windowHeight() - $("#forecast").innerHeight() + "px"
-             });
+             });**/
              }
             var num = (currentTemp * (9/5) + 32) + degree;   
             var $this = $(this);
