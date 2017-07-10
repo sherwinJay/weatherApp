@@ -68,8 +68,11 @@ forecast += '</div>';
                return $(window).innerHeight();
               }  
               $("#weatherContainer").css({
-              height: windowHeight() + "px"
+              height: windowHeight() + "px";
               });
+             $(".current-weather").css({
+             height: windowHeight() - $("#forecast").innerHeight() + "px"
+             });
              }
             var num = (currentTemp * (9/5) + 32) + degree;   
             var $this = $(this);
