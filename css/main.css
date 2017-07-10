@@ -22,6 +22,9 @@ body{
 #weatherContainer{
 	width: 1000px;
 	margin: 0 auto;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .current-weather{
 	padding: 15px 0;
@@ -94,9 +97,6 @@ color: #fff !important;
 	width: 50px;
 	}
 	.current-weather{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	padding: 0;
 	}
 	.forecast{
