@@ -67,11 +67,11 @@ forecast += '</div>';
             function computeHeight(){
              const mobileWidth = 830;
              var $windowHeight = $(window).innerHeight();
-             if($(window).innerWidth() <= mobileWidth){
+             //if($(window).innerWidth() <= mobileWidth){
              $(".current-weather").css({
              height: ($windowHeight - $("#forecast").height()) + "px"
              }); 
-             }
+             //}
              $("#weatherContainer").css({
               height: $windowHeight + "px"
              });
