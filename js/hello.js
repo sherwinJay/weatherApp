@@ -59,11 +59,23 @@
              }
 forecast += '</div>';
   weatherContainer.innerHTML = weatherContainer.innerHTML + forecast;
-            computeHeight(); 
+            //computeHeight(); 
+            
             $(window).on("resize", function(){
-            computeHeight();
+              if($(window).innerWidth() <= mobileWidth){
+             $(".current-weather").css({
+             height: ($windowHeight - $("#forecast").innerHeight()) + "px"
+             }); 
+                }
+            var $windowHeight = $(window).innerHeight();
+             const mobileWidth = 830;
+             $("#weatherContainer").css({
+              height: $windowHeight + "px"
+             });
+            
+             //computeHeight();
             });
-            function computeHeight(){
+            /**function computeHeight(){
               var windowHeight = function(){
                return $(window).innerHeight();
               }
@@ -75,7 +87,7 @@ forecast += '</div>';
               $("#weatherContainer").css({
               height: windowHeight() + "px"
              });
-            }
+            }**/
             var num = (currentTemp * (9/5) + 32) + degree;   
             var $this = $(this);
             $(".tempScale").on("click", ".farenheit" , function(e){  
