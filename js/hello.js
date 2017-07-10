@@ -72,9 +72,9 @@ forecast += '</div>';
              });
              //if($(window).innerWidth() <= mobileWidth){
              $(".current-weather").css({
-             height: ($("#weatherContainer").height() - $("#forecast").height()) + "px"
+             height: ($windowHeight - $(".forecast").height()) + "px"
              }); 
-             console.log(($("#weatherContainer").height() - $("#forecast").height()) + "px");
+             console.log(($windowHeight - $("#forecast").height()) + "px");
              //}
              
              
