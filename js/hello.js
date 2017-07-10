@@ -69,7 +69,7 @@ forecast += '</div>';
              var $windowHeight = $(window).innerHeight();
              if($(window).innerWidth() <= mobileWidth){
              $(".current-weather").css({
-             height: ($windowHeight - $("#forecast").innerHeight()) + "px"
+             height: ($windowHeight - $("#forecast").height()) + "px"
              }); 
              }
              $("#weatherContainer").css({
