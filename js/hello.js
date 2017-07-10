@@ -62,13 +62,13 @@ forecast += '</div>';
             //computeHeight(); 
             
             $(window).on("resize", function(){
-              if($(window).innerWidth() <= mobileWidth){
+             const mobileWidth = 830;
+             var $windowHeight = $(window).innerHeight();
+             if($(window).innerWidth() <= mobileWidth){
              $(".current-weather").css({
              height: ($windowHeight - $("#forecast").innerHeight()) + "px"
              }); 
-                }
-            var $windowHeight = $(window).innerHeight();
-             const mobileWidth = 830;
+             }
              $("#weatherContainer").css({
               height: $windowHeight + "px"
              });
