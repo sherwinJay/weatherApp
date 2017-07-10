@@ -9,7 +9,6 @@
            dataType: "json",
            success: function(data){
              var forecast = '<div class="forecast cfix">',
-                 currentWeather = '<div class="current-weather">',
                  weatherContainer = document.getElementById("weatherContainer"),
                  currentCondition = data.query.results.channel.item.condition.text,
                  currentTemp =  data.query.results.channel.item.condition.temp,
@@ -63,28 +62,28 @@
              computeHeight();
             });
              function computeHeight(){
-             const mobileWidth = 830;
-             var $windowHeight = $(window).innerHeight();
-             $("#weatherContainer").css({
-              height: $windowHeight + "px"
-             });
-             if($(window).innerWidth() <= mobileWidth){
-             $(".current-weather").css({
-             height: ($windowHeight - $(".forecast").height()) + "px"
-             }); 
-             console.log(($windowHeight - $("#forecast").height()) + "px");
+               const mobileWidth = 830;
+               var $windowHeight = $(window).innerHeight();
+               $("#weatherContainer").css({
+                height: $windowHeight + "px"
+               });
+               if($(window).innerWidth() <= mobileWidth){
+               $(".current-weather").css({
+               height: ($windowHeight - $(".forecast").height()) + "px"
+               }); 
+               console.log(($windowHeight - $("#forecast").height()) + "px");
+               }
              }
-           }
-             var num = (currentTemp * (9/5) + 32) + degree;   
-             var $this = $(this);
+             var num = (currentTemp * (9/5) + 32) + degree,   
+                 $highlighted = $(".highlighted");
              $(".tempScale").on("click", ".farenheit" , function(e){  
-             e.preventDefault();
-             $(".highlighted").removeClass("highlighted");
-             $(this).addClass("highlighted").closest(".containerWrapper").find(".temp").html(num.split(".")[1] ? parseFloat(num).toFixed(2) : num);
+               e.preventDefault();
+               $($highlighted).removeClass("highlighted");
+               $(this).addClass("highlighted").closest(".containerWrapper").find(".temp").html(num.split(".")[1] ? parseFloat(num).toFixed(2) : num);
              }).on("click", ".celsius", function(e){
-             e.preventDefault();
-             $(".highlighted").removeClass("highlighted");
-             $(this).addClass("highlighted").closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
+               e.preventDefault();
+               $($highlighted).removeClass("highlighted");
+               $(this).addClass("highlighted").closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
              });
            },
             beforeSend: function(xhr) {
@@ -95,5 +94,3 @@
      
    }
   }
-
-
