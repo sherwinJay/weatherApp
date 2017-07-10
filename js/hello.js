@@ -31,9 +31,9 @@
              $(".imgContainer").html(conditionImg);
              $(".temp").html(currentTemp + degree);
              $(".current-date").html(data.query.results.channel.item.forecast[0].date);
-             $(".current-condition").html("Condition: " + data.query.results.channel.item.condition.text 
-                                                + "   Humidity: " + data.query.results.channel.atmosphere.humidity
-                                                + "   Visibility: " + data.query.results.channel.atmosphere.visibility);
+             $(".current-condition").html(`${Condition:}  data.query.results.channel.item.condition.text 
+                                                   Humidity:  data.query.results.channel.atmosphere.humidity
+                                                   Visibility: ${ data.query.results.channel.atmosphere.visibility}`);
     
           for(var i = 1; i <= 4; i++){
          condition = data.query.results.channel.item.forecast[i].text; 
@@ -54,17 +54,15 @@
       + '<div class="date">' + data.query.results.channel.item.forecast[i].date + '</div>' 
       + '<div class="icon">' + conditionImg + '</div>'
       + '<div class="temp' + i + '">' + data.query.results.channel.item.forecast[i].high + degree + " C" + ' | ' + data.query.results.channel.item.forecast[i].low + "&#176; C" + '</div>' 
-      + '<div class="condition">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;
-              
+      + '<div class="condition">' + data.query.results.channel.item.forecast[i].text + '</div>' + '</div>' ;             
              }
-forecast += '</div>';
-  weatherContainer.innerHTML = weatherContainer.innerHTML + forecast;
+   forecast += '</div>';
+   weatherContainer.innerHTML = weatherContainer.innerHTML + forecast;
             computeHeight(); 
-            
             $(window).on("resize", function(){
              computeHeight();
             });
-            function computeHeight(){
+             function computeHeight(){
              const mobileWidth = 830;
              var $windowHeight = $(window).innerHeight();
              $("#weatherContainer").css({
@@ -76,22 +74,18 @@ forecast += '</div>';
              }); 
              console.log(($windowHeight - $("#forecast").height()) + "px");
              }
-             
-             
            }
-            var num = (currentTemp * (9/5) + 32) + degree;   
-            var $this = $(this);
-            $(".tempScale").on("click", ".farenheit" , function(e){  
-            e.preventDefault();
-              $(".highlighted").removeClass("highlighted");
-              $(this).addClass("highlighted").closest(".containerWrapper").find(".temp").html(num.split(".")[1] ? parseFloat(num).toFixed(2) : num);
+             var num = (currentTemp * (9/5) + 32) + degree;   
+             var $this = $(this);
+             $(".tempScale").on("click", ".farenheit" , function(e){  
+             e.preventDefault();
+             $(".highlighted").removeClass("highlighted");
+             $(this).addClass("highlighted").closest(".containerWrapper").find(".temp").html(num.split(".")[1] ? parseFloat(num).toFixed(2) : num);
              }).on("click", ".celsius", function(e){
-              e.preventDefault();
-              $(".highlighted").removeClass("highlighted");
+             e.preventDefault();
+             $(".highlighted").removeClass("highlighted");
              $(this).addClass("highlighted").closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
-           });
-           
-             
+             });
            },
             beforeSend: function(xhr) {
            xhr.setRequestHeader("X-Mashape-Key", "n2JY9NePqSmshITplIN7rdB7kMEkp1BeG00jsnd3uVIHwON3AK"); // Enter here your Mashape key
