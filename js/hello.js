@@ -67,16 +67,14 @@ forecast += '</div>';
               var windowHeight = function(){
                return $(window).innerHeight();
               }
-              if($(window).innerWidth() >= 830){
+             /**if($(window).innerWidth() >= 830){
              $(".current-weather").css({
              height: windowHeight() - $("#forecast").innerHeight() + "px"
              });
-             }else{
+             **/
               $("#weatherContainer").css({
               height: windowHeight() + "px"
-              });
-             }
-             }
+             });
             var num = (currentTemp * (9/5) + 32) + degree;   
             var $this = $(this);
             $(".tempScale").on("click", ".farenheit" , function(e){  
