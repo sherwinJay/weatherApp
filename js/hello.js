@@ -67,7 +67,7 @@ forecast += '</div>';
               var windowHeight = function(){
                return $(window).innerHeight();
               }
-              if($(window).innerWidth() > 830){
+              if($(window).innerWidth() >= 830){
              $(".current-weather").css({
              height: windowHeight() - $("#forecast").innerHeight() + "px"
              });
