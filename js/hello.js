@@ -59,9 +59,12 @@
              }
 forecast += '</div>';
   weatherContainer.innerHTML = weatherContainer.innerHTML + forecast;
-            //computeHeight(); 
+            computeHeight(); 
             
             $(window).on("resize", function(){
+             computeHeight();
+            });
+            function computeHeight(){
              const mobileWidth = 830;
              var $windowHeight = $(window).innerHeight();
              if($(window).innerWidth() <= mobileWidth){
@@ -72,22 +75,7 @@ forecast += '</div>';
              $("#weatherContainer").css({
               height: $windowHeight + "px"
              });
-            
-             //computeHeight();
-            });
-            /**function computeHeight(){
-              var windowHeight = function(){
-               return $(window).innerHeight();
-              }
-             if($(window).innerWidth() >= 830){
-             $(".current-weather").css({
-             height: windowHeight() - $("#forecast").innerHeight() + "px"
-             });
-             }
-              $("#weatherContainer").css({
-              height: windowHeight() + "px"
-             });
-            }**/
+            }
             var num = (currentTemp * (9/5) + 32) + degree;   
             var $this = $(this);
             $(".tempScale").on("click", ".farenheit" , function(e){  
