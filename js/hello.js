@@ -15,7 +15,7 @@
                  degree = "&#176;",
                  condition,
                  conditionImg; 
-            if(currentCondition.includes("Sunny")){
+         if(currentCondition.includes("Sunny")){
          conditionImg = '<img src="css/images/sunny.png" />';
          }else if(currentCondition.includes("Clear")){
          conditionImg = '<img src="css/images/nightr-icon.png" />';
@@ -26,26 +26,26 @@
          }else if(currentCondition.includes("Showers") || currentCondition.includes("Rain")){
           conditionImg = '<img src="css/images/rain.png" />' 
          }
-             $(".location").html(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
-             $(".imgContainer").html(conditionImg);
-             $(".temp").html(currentTemp + degree);
-             $(".current-date").html(data.query.results.channel.item.forecast[0].date);
-             $(".current-condition").html(`Condition:  ${data.query.results.channel.item.condition.text} 
-                                                   Humidity:  ${data.query.results.channel.atmosphere.humidity}
-                                                   Visibility: ${data.query.results.channel.atmosphere.visibility}`);
+         $(".location").html(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
+         $(".imgContainer").html(conditionImg);
+         $(".temp").html(currentTemp + degree);
+         $(".current-date").html(data.query.results.channel.item.forecast[0].date);
+         $(".current-condition").html(`Condition:  ${data.query.results.channel.item.condition.text} 
+                                               Humidity:  ${data.query.results.channel.atmosphere.humidity}
+                                               Visibility: ${data.query.results.channel.atmosphere.visibility}`);
     
-          for(var i = 1; i <= 4; i++){
-         condition = data.query.results.channel.item.forecast[i].text; 
-         if(condition.includes("Sunny")){
-         conditionImg = '<img src="css/images/sunny.png" />';
-         }else if(condition.includes("Clear")){
-         conditionImg = '<img src="css/images/nightr-icon.png" />';
-         }else if(condition.includes("Cloudy")){
-         conditionImg = '<img src="css/images/cloudy.png" />';
-         }else if(condition.includes("Thunderstorms")){
-         conditionImg = '<img src="css/images/thunderstorm.png" />';
-         }else if(condition.includes("Showers") || condition.includes("Rain")){
-          conditionImg = '<img src="css/images/rain.png" />' 
+         for(var i = 1; i <= 4; i++){
+          condition = data.query.results.channel.item.forecast[i].text; 
+          if(condition.includes("Sunny")){
+          conditionImg = '<img src="css/images/sunny.png" />';
+          }else if(condition.includes("Clear")){
+          conditionImg = '<img src="css/images/nightr-icon.png" />';
+          }else if(condition.includes("Cloudy")){
+          conditionImg = '<img src="css/images/cloudy.png" />';
+          }else if(condition.includes("Thunderstorms")){
+          conditionImg = '<img src="css/images/thunderstorm.png" />';
+          }else if(condition.includes("Showers") || condition.includes("Rain")){
+           conditionImg = '<img src="css/images/rain.png" />' 
          }
             
     forecast += '<div class="weatherBox col-left">' 
