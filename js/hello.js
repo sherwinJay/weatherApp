@@ -71,7 +71,7 @@ forecast += '</div>';
              $(".current-weather").css({
              height: windowHeight() - $("#forecast").innerHeight() + "px"
              });
-             
+             }
               $("#weatherContainer").css({
               height: windowHeight() + "px"
              });
