@@ -66,14 +66,15 @@ forecast += '</div>';
             function computeHeight(){
               var windowHeight = function(){
                return $(window).innerHeight();
-              }  
-              $("#weatherContainer").css({
-              height: windowHeight() + "px"
-              });
-             if($(window).innerWidth() > 830){
+              }
+              if($(window).innerWidth() > 830){
              $(".current-weather").css({
              height: windowHeight() - $("#forecast").innerHeight() + "px"
              });
+             }else{
+              $("#weatherContainer").css({
+              height: windowHeight() + "px"
+              });
              }
              }
             var num = (currentTemp * (9/5) + 32) + degree;   
