@@ -30,8 +30,8 @@
          $(".imgContainer").html(conditionImg);
          $(".temp").html(currentTemp + degree);
          $(".current-date").html(data.query.results.channel.item.forecast[0].date);
-         $(".current-condition").html(`Condition:  ${data.query.results.channel.item.condition.text} 
-                                               Humidity:  ${data.query.results.channel.atmosphere.humidity}
+         $(".current-condition").html(`Condition:  ${data.query.results.channel.item.condition.text} /s
+                                               Humidity:  ${data.query.results.channel.atmosphere.humidity} /s
                                                Visibility: ${data.query.results.channel.atmosphere.visibility}`);
     
          for(var i = 1; i <= 4; i++){
