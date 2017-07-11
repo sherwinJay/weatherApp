@@ -76,7 +76,7 @@
                }); 
                }else{
                $(".current-weather").css({
-               height: $(this).outerHeight();
+               height: $(this).outerHeight()
                });
                }
              }
