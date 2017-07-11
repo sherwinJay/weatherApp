@@ -20,6 +20,9 @@ color: #fee;
 text-align: center;
 margin: 0 !important;
 }
+h1{
+font-family: 'josefin_sanslight';
+}
 #weatherContainer{
 width: 1000px;
 margin: 0 auto;
