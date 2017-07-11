@@ -14,7 +14,7 @@
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
 body{
-font-family: "josefin_sanslight";
+font-family: 'josefin_sanslight';
 background-color: #1959a2;
 color: #fee;
 text-align: center;
