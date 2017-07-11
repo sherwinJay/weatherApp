@@ -99,6 +99,7 @@ color: #fff !important;
 	}
 	.current-weather{
 	padding: 0;
+		align-content: center;
 	min-height: 328px !important;
 	}
 	.forecast{
