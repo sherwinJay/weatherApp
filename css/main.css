@@ -89,7 +89,7 @@ color: #fff !important;
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
-	min-height: 460px; 
+	min-height: 460px !important; 
 	}
 	.date, .condition{
 	display: none;
