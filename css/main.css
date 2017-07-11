@@ -98,7 +98,8 @@ color: #fff !important;
 	width: 50px;
 	}
 	.current-weather{
-	padding: 0;	
+	padding: 0;
+	min-height: 320px
 	}
 	.forecast{
 	position: absolute;
