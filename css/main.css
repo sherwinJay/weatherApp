@@ -13,15 +13,12 @@
 * html .cfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
-body{
+body{ 
 font-family: 'josefin_sanslight';
 background-color: #1959a2;
 color: #fee;
 text-align: center;
 margin: 0 !important;
-}
-h1{
-font-family: 'josefin_sanslight';
 }
 #weatherContainer{
 width: 1000px;
