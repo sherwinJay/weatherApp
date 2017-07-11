@@ -67,13 +67,16 @@
                return $(window).innerHeight();
                }
                //var $windowHeight = $(window).innerHeight();
+               $("#weatherContainer").css({
+                height: windowHeight() + "px"
+               });
                if($(window).innerWidth() <= mobileWidth){
                $(".current-weather").css({
                height: (windowHeight() - $(".forecast").height()) + "px"
                }); 
                }else{
-               $("#weatherContainer").css({
-                height: windowHeight() + "px"
+               $(".current-weather").css({
+               height: $(this).outerHeight();
                });
                }
              }
