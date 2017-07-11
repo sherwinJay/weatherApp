@@ -78,6 +78,9 @@ color: #fff !important;
 	}
 }
 @media (max-width: 830px){
+	body{
+	min-height: 460px; 
+	}
 	.weatherBox{
 	width: 25%;
 	margin: 0;
