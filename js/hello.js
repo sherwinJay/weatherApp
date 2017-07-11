@@ -82,7 +82,7 @@
              $(this).addClass("highlighted").closest(".containerWrapper").find(".temp").html(num.split(".")[1] ? parseFloat(num).toFixed(2) : num);
              }).on("click", ".celsius", function(e){
              e.preventDefault();
-             $".highlighted").removeClass("highlighted");
+             $(".highlighted").removeClass("highlighted");
              $(this).addClass("highlighted").closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
              });
            },
