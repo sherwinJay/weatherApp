@@ -63,7 +63,6 @@
             });
              function computeHeight(){
                const mobileWidth = 830;
-               const mobileMinHeight = 450;
                let windowHeight = function(){
                return $(window).innerHeight();
                }
@@ -80,15 +79,15 @@
                });
                }
              }
-             var num = (currentTemp * (9/5) + 32) + degree;   
-                // $highlighted = $(".highlighted");
+             var num = (currentTemp * (9/5) + 32) + degree,  
+                $highlighted = $(".highlighted");
              $(".tempScale").on("click", ".farenheit" , function(e){  
              e.preventDefault();
-             $(".highlighted").removeClass("highlighted");
+             $highlighted.removeClass("highlighted");
              $(this).addClass("highlighted").closest(".containerWrapper").find(".temp").html(num.split(".")[1] ? parseFloat(num).toFixed(2) : num);
              }).on("click", ".celsius", function(e){
              e.preventDefault();
-             $(".highlighted").removeClass("highlighted");
+             $highlighted.removeClass("highlighted");
              $(this).addClass("highlighted").closest(".containerWrapper").find(".temp").html( currentTemp + "&#176;");
              });
            },
