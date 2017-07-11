@@ -89,7 +89,6 @@ color: #fff !important;
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
-	min-height: 460px !important; 
 	}
 	.date, .condition{
 	display: none;
@@ -99,7 +98,6 @@ color: #fff !important;
 	}
 	.current-weather{
 	padding: 0;
-	min-height: 320px !important
 	}
 	.forecast{
 	position: absolute;
