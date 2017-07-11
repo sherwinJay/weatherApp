@@ -63,17 +63,22 @@
             });
              function computeHeight(){
                const mobileWidth = 830;
+               const mobileMinHeight = 450;
                let windowHeight = function(){
                return $(window).innerHeight();
                }
-               //var $windowHeight = $(window).innerHeight();
                $("#weatherContainer").css({
                 height: windowHeight() + "px"
                });
                if($(window).innerWidth() <= mobileWidth){
-               $(".current-weather").css({
-               height: (windowHeight() - $(".forecast").height()) + "px"
-               }); 
+                  if(windowHeight() < mobileMinHeight){
+                  $(".current-weather").css({
+                  height: mobileMinHeight + "px"
+                  }); 
+                  }
+                  $(".current-weather").css({
+                  height: (windowHeight() - $(".forecast").height()) + "px"
+                  });
                }else{
                $(".current-weather").css({
                height: 240 + "px"
