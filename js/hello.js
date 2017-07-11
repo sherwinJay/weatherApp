@@ -70,10 +70,10 @@
                $("#weatherContainer").css({
                 height: windowHeight() + "px"
                });
-               if($(window).innerWidth() <= mobileWidth){
+               /**if($(window).innerWidth() <= mobileWidth){
                $(".current-weather").css({
                height: (windowHeight() - $(".forecast").height()) + "px"
-               }); 
+               }); **/
                }
              }
              var num = (currentTemp * (9/5) + 32) + degree;   
