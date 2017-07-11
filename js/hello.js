@@ -72,7 +72,7 @@
                });
                if($(window).innerWidth() <= mobileWidth){
                   if(windowHeight() < mobileMinHeight){
-                  $(".current-weather").css({
+                  $(window).css({
                   height: mobileMinHeight + "px"
                   }); 
                   }
