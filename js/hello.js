@@ -71,14 +71,9 @@
                 height: windowHeight() + "px"
                });
                if($(window).innerWidth() <= mobileWidth){
-                  if(windowHeight() < mobileMinHeight){
-                  $(window).css({
-                  height: mobileMinHeight + "px"
-                  }); 
-                  }
-                  $(".current-weather").css({
-                  height: (windowHeight() - $(".forecast").height()) + "px"
-                  });
+               $(".current-weather").css({
+               height: (windowHeight() - $(".forecast").height()) + "px"
+               });
                }else{
                $(".current-weather").css({
                height: 240 + "px"
