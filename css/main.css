@@ -12,9 +12,8 @@
 	}
 * html .cfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
-@import url('https://fonts.googleapis.com/css?family=Roboto');
 body{ 
-font-family: 'Roboto', sans-serif;
+font-family: 'Montserrat', sans-serif;
 background-color: #1959a2;
 color: #fee;
 text-align: center;
