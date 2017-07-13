@@ -110,4 +110,8 @@ display: inline;
 	bottom: 0;
 	width: 100%;
 	}
+	.current-condition, .humidity, .visibility{
+	margin: 5px 0;
+	display: inline;
+}
 }
