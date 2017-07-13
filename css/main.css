@@ -68,8 +68,8 @@ margin: 0 auto;
 .highlighted{
 color: #fff !important;
 }
-.condition, .humidity, .visibility{
-margin: 0 15px;
+.current-condition, .humidity, .visibility{
+margin: 0 10px;
 display: inline;
 }
 @media (max-width: 1020px){
