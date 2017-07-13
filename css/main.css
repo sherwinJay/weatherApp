@@ -68,6 +68,9 @@ margin: 0 auto;
 .highlighted{
 color: #fff !important;
 }
+.condition, .humidity, .visibility{
+margin: 0 15px;
+}
 @media (max-width: 1020px){
 	.weatherBox{
 	width: 160px;
