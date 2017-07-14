@@ -81,7 +81,7 @@ display: inline;
 	width: 800px;
 	}
 }
-@media (max-width: 830px){
+@media (max-width: 850px){
 	.weatherBox{
 	width: 25%;
 	margin: 0;
