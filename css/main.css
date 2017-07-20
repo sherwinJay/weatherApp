@@ -18,6 +18,7 @@ background-color: #1959a2;
 color: #fee;
 text-align: center;
 margin: 0 !important;
+background-size: "cover";
 }
 #weatherContainer{
 width: 1000px;
