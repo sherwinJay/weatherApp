@@ -3,9 +3,13 @@
        if(navigator.geolocation){
        navigator.geolocation.getCurrentPosition(function(position) {
       $.ajax({
-           url: "https://simple-weather.p.mashape.com/weatherdata?lat=" + position.coords.latitude + "&lng=" + position.coords.longitude,
+           var apiUrl = "https://simple-weather.p.mashape.com/weatherdata?"; 
+           url: apiUrl,
+           data: {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+           },
            type: "GET",
-           data: {},
            dataType: "json",
            success: function(data){
              var forecast = '<div class="forecast cfix">',
