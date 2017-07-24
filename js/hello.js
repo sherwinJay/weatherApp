@@ -1,9 +1,9 @@
  weather();
   function weather(){
+       var apiUrl = "https://simple-weather.p.mashape.com/weatherdata?"; 
        if(navigator.geolocation){
        navigator.geolocation.getCurrentPosition(function(position) {
       $.ajax({
-           var apiUrl = "https://simple-weather.p.mashape.com/weatherdata?"; 
            url: apiUrl,
            data: {
             lat: position.coords.latitude,
