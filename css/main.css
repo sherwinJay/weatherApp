@@ -45,6 +45,9 @@ float: left;
 .current-weather img{
 width: 100px;
 }
+.current-date{
+margin: 5px 0;
+}
 .temp{
 font-size: 44px;
 margin: 25px 10px 0;
