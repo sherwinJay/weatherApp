@@ -22,7 +22,7 @@
          if(currentCondition.includes("Sunny")){
          conditionImg = '<img src="css/images/sunny.png" />';
          }else if(currentCondition.includes("Clear")){
-         conditionImg = '<img src="css/images/nightr-icon.png" />';
+         conditionImg = '<img src="css/images/nightr-icons.png" />';
          }else if(currentCondition.includes("Cloudy")){
          conditionImg = '<img src="css/images/cloudy.png" />';
          }else if(currentCondition.includes("Thunderstorms")){
