@@ -43,7 +43,7 @@ margin: 0 auto;
 float: left;
 }
 .current-weather img{
-width: 100px;
+height: 80px;
 }
 .current-date{
 margin: 5px 0;
