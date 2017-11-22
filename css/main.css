@@ -29,13 +29,14 @@ padding: 45px 0 15px;
 }
 .weatherBox{
 width: 200px;
+min-height: 242px;
 padding: 30px 15px;
 background-color: rgba(0,0,0,0.70);
 margin: 0 3px;
 text-align: center;
 }
 .weatherBox img{
-height: 70px;
+width: 70px;
 display: block;				
 margin: 0 auto;
 }
