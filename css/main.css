@@ -89,12 +89,10 @@ display: inline;
 @media (max-width: 850px){
 	.weatherBox{
 	width: 25%;
+	min-height: 131px;
 	margin: 0;
 	padding: 20px 0;
 	background-color: #2e2e2e;
-	}
-	.weatherBox img{
-	height: 35px;
 	}
 	#weatherContainer{
 	position: relative;
@@ -106,6 +104,7 @@ display: inline;
 	}
 	.icon img{
 	width: 40px;
+	height
 	}
 	.current-weather{
 	padding: 0;
