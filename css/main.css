@@ -89,6 +89,7 @@ display: inline;
 @media (max-width: 850px){
 	.weatherBox{
 	width: 25%;
+	height: 25%;
 	margin: 0;
 	padding: 20px 0;
 	background-color: #2e2e2e;
