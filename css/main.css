@@ -29,7 +29,6 @@ padding: 45px 0 15px;
 }
 .weatherBox{
 width: 200px;
-min-height: 242px;
 padding: 30px 15px;
 background-color: rgba(0,0,0,0.70);
 margin: 0 3px;
@@ -54,6 +53,7 @@ font-size: 44px;
 margin: 25px 10px 0;
 }
 .icon{
+min-height: 70px;
 margin: 10px 0;
 }
 .celsius{
@@ -103,9 +103,11 @@ display: inline;
 	.date, .condition{
 	display: none;
 	}
+	.icon{
+	min-height: 45px;
+	}
 	.icon img{
 	width: 40px;
-	height
 	}
 	.current-weather{
 	padding: 0;
