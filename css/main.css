@@ -94,7 +94,7 @@ display: inline;
 	background-color: #2e2e2e;
 	}
 	.weatherBox img{
-	height: 25%;
+	height: 40px;
 	}
 	#weatherContainer{
 	position: relative;
